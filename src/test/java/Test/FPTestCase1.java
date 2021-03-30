@@ -18,12 +18,12 @@ public class FPTestCase1 {
 	
 	@BeforeTest
 	public void setBaseUrl() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:/Users/Usuario/Downloads/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
-		//implicit wait= de no ser posible realizar algun paso, espera hasta 10 segundos(en este caso)
-		// entre cada uno de los pasos
+		/* implicit wait= de no ser posible realizar algun paso, espera hasta 10 segundos(en este caso)
+		 entre cada uno de los pasos*/
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
@@ -31,7 +31,7 @@ public class FPTestCase1 {
 	public void successfullyLogin() throws InterruptedException {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
-		mainPage.clickSignIn();
+		mainPage.clicksignIn();
 		loginPage.enterUserEmail("ya_el1995@hotmail.com");
 		loginPage.enterUserPassword("KnD504012");
 		loginPage.clickSubmitButton();
@@ -42,7 +42,7 @@ public class FPTestCase1 {
 	public void buyArticleSuccessfully() throws InterruptedException {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
-		mainPage.clickSignIn();
+		mainPage.clicksignIn();
 		loginPage.enterUserEmail("ya_el1995@hotmail.com");
 		loginPage.enterUserPassword("KnD504012");
 		loginPage.clickSubmitButton();
