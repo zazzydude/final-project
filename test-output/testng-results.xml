@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-30T11:15:35 CST" name="Default suite" finished-at="2021-03-30T11:15:35 CST" duration-ms="179">
+  <suite started-at="2021-03-30T11:32:12 CST" name="Default suite" finished-at="2021-03-30T11:32:12 CST" duration-ms="232">
     <groups>
     </groups>
-    <test started-at="2021-03-30T11:15:35 CST" name="Default test" finished-at="2021-03-30T11:15:35 CST" duration-ms="179">
+    <test started-at="2021-03-30T11:32:12 CST" name="Default test" finished-at="2021-03-30T11:32:12 CST" duration-ms="232">
       <class name="Test.FPTestCase1">
-        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase1@4e268090]" started-at="2021-03-30T11:15:35 CST" name="setBaseUrl" finished-at="2021-03-30T11:15:35 CST" duration-ms="99" status="FAIL">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase1@d9345cd]" started-at="2021-03-30T11:32:12 CST" name="setBaseUrl" finished-at="2021-03-30T11:32:12 CST" duration-ms="124" status="FAIL">
           <exception class="java.lang.IllegalStateException">
             <message>
               <![CDATA[The driver executable does not exist: C:\Users\Luis\Documents\acadamy1\academy\node_modules\chromedriver\lib\chromedriver\chromedriver.exe]]>
@@ -15,12 +15,12 @@
             <full-stacktrace>
               <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Luis\Documents\acadamy1\academy\node_modules\chromedriver\lib\chromedriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at Test.FPTestCase1.setBaseUrl(FPTestCase1.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -53,7 +53,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBaseUrl -->
-        <test-method signature="successfullyLogin()[pri:0, instance:Test.FPTestCase1@4e268090]" started-at="2021-03-30T11:15:35 CST" name="successfullyLogin" finished-at="2021-03-30T11:15:35 CST" duration-ms="0" status="SKIP">
+        <test-method signature="successfullyLogin()[pri:0, instance:Test.FPTestCase1@d9345cd]" started-at="2021-03-30T11:32:12 CST" name="successfullyLogin" finished-at="2021-03-30T11:32:12 CST" duration-ms="0" status="SKIP">
           <exception class="java.lang.IllegalStateException">
             <message>
               <![CDATA[The driver executable does not exist: C:\Users\Luis\Documents\acadamy1\academy\node_modules\chromedriver\lib\chromedriver\chromedriver.exe]]>
@@ -61,12 +61,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <full-stacktrace>
               <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Luis\Documents\acadamy1\academy\node_modules\chromedriver\lib\chromedriver\chromedriver.exe
 at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
 at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at Test.FPTestCase1.setBaseUrl(FPTestCase1.java:24)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -99,7 +99,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfullyLogin -->
-        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase1@4e268090]" started-at="2021-03-30T11:15:35 CST" name="endSession" finished-at="1969-12-31T18:00:00 CST" duration-ms="-1617124535205" status="SKIP">
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase1@d9345cd]" started-at="2021-03-30T11:32:12 CST" name="endSession" finished-at="1969-12-31T18:00:00 CST" duration-ms="-1617125532813" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSession -->
