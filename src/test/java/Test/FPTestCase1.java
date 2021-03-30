@@ -1,45 +1,58 @@
 package Test;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import pages.LoginPage;
 import pages.MainPage;
+import pages.MyAccountPage;
+import pages.MyAccountPage.navBar;
+
 
 public class FPTestCase1 {
 	WebDriver driver;
 	
-	
-	
-	// test para probar githud
-	
-	//test #2 git 
-	//test #3 creado por Yael
-	//test #4 mariela
-	// test #5 holamundo
-
 	@BeforeTest
 	public void setBaseUrl() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Luis\\Documents\\acadamy1\\academy\\node_modules\\chromedriver\\lib\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:/Users/Usuario/Downloads/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
-		Thread.sleep(3000);
+		//implicit wait= de no ser posible realizar algun paso, espera hasta 10 segundos(en este caso)
+		// entre cada uno de los pasos
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	@Test
+	@Test(enabled = false)
 	public void successfullyLogin() throws InterruptedException {
-		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-		mainPage.clickSingIn();
+		MainPage mainPage = new MainPage(driver);
+		LoginPage loginPage = new LoginPage(driver);
+		mainPage.clickSignIn();
 		loginPage.enterUserEmail("ya_el1995@hotmail.com");
 		loginPage.enterUserPassword("KnD504012");
 		loginPage.clickSubmitButton();
+		
 	}
+	
+	@Test(enabled = true)
+	public void buyArticleSuccessfully() throws InterruptedException {
+		MainPage mainPage = new MainPage(driver);
+		LoginPage loginPage = new LoginPage(driver);
+		mainPage.clickSignIn();
+		loginPage.enterUserEmail("ya_el1995@hotmail.com");
+		loginPage.enterUserPassword("KnD504012");
+		loginPage.clickSubmitButton();
+		
+		MyAccountPage accP = new MyAccountPage(driver);
+		accP.getNavBarOptions(navBar.DRESSES).click();
+		Thread.sleep(3000);
+		
+	}
+	
 	
 	@AfterTest
 	public void endSession() {

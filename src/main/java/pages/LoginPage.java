@@ -3,14 +3,16 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 	
-	final WebDriver driver;
-	final int SLEEP_TIME = 1500;
+	
 	
 	public LoginPage (WebDriver driver) {
-		this.driver = driver;
+		//Puse aqui el initElements para que cada vez que creemos una instancia de esta clase
+		// Se inicialice nuestros elementos
+		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(id="email")
@@ -36,9 +38,10 @@ public class LoginPage {
 	 * @param email -user email
 	 * @throws InterruptedException
 	 */
-	public void enterUserEmail(String email) throws InterruptedException {
+	public void enterUserEmail(String email) {
+		//Quite todos los waits por que con el implicit wait ya no son necesarios
 		this.emailTextBox.sendKeys(email);
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
@@ -46,18 +49,18 @@ public class LoginPage {
 	 * @param pass -user password
 	 * @throws InterruptedException
 	 */
-	public void enterUserPassword(String pass) throws InterruptedException {
+	public void enterUserPassword(String pass) {
 		this.passwordTextBox.sendKeys(pass);
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the login submit button
 	 * @throws InterruptedException
 	 */
-	public void clickSubmitButton() throws InterruptedException {
+	public void clickSubmitButton() {
 		this.submitButton.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
@@ -65,26 +68,26 @@ public class LoginPage {
 	 * @param email -user email
 	 * @throws InterruptedException
 	 */
-	public void enterRegisterEmail(String email) throws InterruptedException {
+	public void enterRegisterEmail(String email)  {
 		this.emailCreateTextBox.sendKeys(email);
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click on the create submit button to create a new account
 	 * @throws InterruptedException
 	 */
-	public void clickSubmitCreateButton() throws InterruptedException {
+	public void clickSubmitCreateButton()  {
 		this.submitCreateButton.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click on the link to recover the user password
 	 * @throws InterruptedException
 	 */
-	public void clickRecoverPasswordLink() throws InterruptedException {
+	public void clickRecoverPasswordLink() {
 		this.forgotPasswordLink.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 }
