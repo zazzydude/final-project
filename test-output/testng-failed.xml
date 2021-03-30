@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.FPTestCase1">
+      <class name="pages.FPTestCase1">
         <methods>
           <include name="endSession"/>
           <include name="setBaseUrl"/>
           <include name="successfullyLogin"/>
         </methods>
-      </class> <!-- Test.FPTestCase1 -->
+      </class> <!-- pages.FPTestCase1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
