@@ -8,12 +8,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MyAccountPage {
-	//Cree este enum para crearme un grupo de palabras para utilizarlas en el switch
+
 	public enum navBar {
 		WOMEN,
 		DRESSES,
 		TSHIRT
 	}
+	
+	final int SLEEP_TIME = 1500;
 	
 	public MyAccountPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -63,6 +65,55 @@ public class MyAccountPage {
 					element = null;
 		}
 		return element;
+	}
+	
+	/**
+	 * Click the Order History Details button
+	 * @throws InterruptedException
+	 */
+	public void clickOrderHistoryDetails() throws InterruptedException {
+		this.orderHistoryDetails.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+	
+	
+	/**
+	 * Click My Wish Lists button
+	 * @throws InterruptedException
+	 */
+	public void clickmyWishLists() throws InterruptedException {
+		this.myWishLists.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+	
+	
+	/**
+	 * Click My Credit Slips button
+	 * @throws InterruptedException
+	 */
+	public void clickMyCreditSlips() throws InterruptedException {
+		this.myCreditSlips.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+	
+	
+	/**
+	 * Click My Addresses button
+	 * @throws InterruptedException
+	 */
+	public void clickMyAddresses() throws InterruptedException {
+		this.myAddresses.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+	
+	
+	/**
+	 * Click MyPersonalInformation button
+	 * @throws InterruptedException
+	 */
+	public void clickMyPersonalInformation() throws InterruptedException {
+		this.myPersonalInformation.click();
+		Thread.sleep(SLEEP_TIME);
 	}
 
 
