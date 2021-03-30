@@ -116,5 +116,10 @@ public class MyAccountPage {
 		Thread.sleep(SLEEP_TIME);
 	}
 
+	public void clickMyAddressesOption() throws InterruptedException {
+		this.myAddresses.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+
 
 }
