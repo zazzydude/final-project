@@ -14,6 +14,7 @@ public class FPTestCase1 {
 	WebDriver driver;
 	
 	//test #2 git 
+	//test #3 creado por Yael
 
 	@BeforeTest
 	public void setBaseUrl() throws InterruptedException {
