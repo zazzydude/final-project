@@ -3,15 +3,14 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class MainPage {
 
-	final WebDriver driver;
-	final int SLEEP_TIME = 1500;
+	
 
-	public MainPage(WebDriver driver)
-	{
-	this.driver = driver;	
+	public MainPage(WebDriver driver){
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(xpath=".//a[@class='login']")
@@ -79,12 +78,8 @@ public class MainPage {
 	
 	@FindBy (xpath="//*[@id='block_top_menu']/ul/li[1]/ul/li[2]/ul/li[3]/a")
 	WebElement summerDresses;
-	
-	@FindBy(xpath=".//a[@class='login']")
-	WebElement signIn;
-	
-	public void clickSingIn() throws InterruptedException {
-		this.signIn.click();
-		Thread.sleep(SLEEP_TIME);
+
+	public void clickSignIn() {	
+		singIn.click();
 	}
 }
