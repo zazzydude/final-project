@@ -78,8 +78,208 @@ public class MainPage {
 	
 	@FindBy (xpath="//*[@id='block_top_menu']/ul/li[1]/ul/li[2]/ul/li[3]/a")
 	WebElement summerDresses;
-
-	public void clickSignIn() {	
-		singIn.click();
+	
+	@FindBy(xpath=".//a[@class='login']")
+	WebElement signIn;
+	
+	/**
+	 * Click the Sign in button
+	 * @throws InterruptedException
+	 */
+	public void clicksignIn()  {
+		this.signIn.click();
+		
+	}
+	
+	/**
+	 * Click the Contact Us button
+	 * @throws InterruptedException
+	 */
+	public void contactUs()  {
+		this.contactUs.click();
+		
+	}
+	
+	/**
+	 * Click the Header image
+	 * @throws InterruptedException
+	 */
+	public void imgResponsive() {
+		this.imgResponsive.click();
+		
+	}
+	
+	/**
+	 * Click the Logo_image
+	 * @throws InterruptedException
+	 */
+	public void logoImage()  {
+		this.logoImgResponsive.click();
+		
+	}
+	
+	/**
+	 * Click the Shopping Cart button
+	 * @throws InterruptedException
+	 */
+	public void shoppingCart()  {
+		this.shoppingCart.click();
+		
+	}
+	
+	/**
+	 * Click the Search button
+	 * @throws InterruptedException
+	 */
+	public void search()  {
+		this.search.click();
+	
+	}
+	
+	/**
+	 * Send text to the input search query of the login
+	 * @param data - user research
+	 * @throws InterruptedException
+	 */
+	public void searchQuery(String data)  {
+		this.searchQuery.sendKeys(data);
+		
+	}
+	
+	/**
+	 * Click the Women button
+	 * @throws InterruptedException
+	 */
+	public void women()  {
+		this.women.click();
+		
+	}
+	
+	/**
+	 * Click the Dresses button
+	 * @throws InterruptedException
+	 */
+	public void dresses()  {
+		this.dresses.click();
+		
+	}
+	
+	/**
+	 * Click the tShirtsMenu button
+	 * @throws InterruptedException
+	 */
+	public void tshirtsMenu()  {
+		this.tshirtsMenu.click();
+		
+	}
+	
+	/**
+	 * Click the Shop button
+	 * @throws InterruptedException
+	 */
+	public void shopButton() {
+		this.shopButton.click();
+		
+	}
+	
+	/**
+	 * Click the Popular button
+	 * @throws InterruptedException
+	 */
+	public void popular()  {
+		this.popular.click();
+		
+	}
+	
+	/**
+	 * Click the Best Sellers button
+	 * @throws InterruptedException
+	 */
+	public void bestSellers() {
+		this.bestSellers.click();
+		
+	}
+	
+	/**
+	 * Click the Previous button
+	 * @throws InterruptedException
+	 */
+	public void prev()  {
+		this.prev.click();
+		
+	}
+	
+	
+	/**
+	 * Click the Next button
+	 * @throws InterruptedException
+	 */
+	public void next()  {
+		this.next.click();
+		
+	}
+	
+	/**
+	 * Click the Banner 25%OFF Image
+	 * @throws InterruptedException
+	 */
+	public void bannerSeis()  {
+		this.bannerSeis.click();
+		
+	}
+	
+	/**
+	 * Click the Banner 45%OFF Image
+	 * @throws InterruptedException
+	 */
+	public void bannerSiete()  {
+		this.bannerSiete.click();
+		
+	}
+	
+	/**
+	 * Click the T-shirts button
+	 * @throws InterruptedException
+	 */
+	public void tshirts() {
+		this.tshirts.click();
+		
+	}
+	
+	
+	/**
+	 * Click the Blouses button
+	 * @throws InterruptedException
+	 */
+	public void blouses()  {
+		this.blouses.click();
+		
+	}
+	
+	/**
+	 * Click the Casual Dresses button
+	 * @throws InterruptedException
+	 */
+	public void casualDresses() {
+		this.casualDresses.click();
+		
+	}
+	
+	/**
+	 * Click the Evening Dresses button
+	 * @throws InterruptedException
+	 */
+	public void eveningDresses()  {
+		this.eveningDresses.click();
+		
+	}
+	
+	/**
+	 * Click the Summer Dresses button
+	 * @throws InterruptedException
+	 */
+	public void summerDresses()  {
+		this.summerDresses.click();
+		
 	}
 }

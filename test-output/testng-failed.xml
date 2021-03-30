@@ -7,7 +7,7 @@
         <methods>
           <include name="endSession"/>
           <include name="setBaseUrl"/>
-          <include name="successfullyLogin"/>
+          <include name="buyArticleSuccessfully"/>
         </methods>
       </class> <!-- Test.FPTestCase1 -->
     </classes>
