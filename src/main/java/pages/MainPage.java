@@ -86,54 +86,54 @@ public class MainPage {
 	 * Click the Sign in button
 	 * @throws InterruptedException
 	 */
-	public void clicksignIn() throws InterruptedException {
+	public void clicksignIn()  {
 		this.signIn.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Contact Us button
 	 * @throws InterruptedException
 	 */
-	public void contactUs() throws InterruptedException {
+	public void contactUs()  {
 		this.contactUs.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Header image
 	 * @throws InterruptedException
 	 */
-	public void imgResponsive() throws InterruptedException {
+	public void imgResponsive() {
 		this.imgResponsive.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Logo_image
 	 * @throws InterruptedException
 	 */
-	public void logoImage() throws InterruptedException {
+	public void logoImage()  {
 		this.logoImgResponsive.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Shopping Cart button
 	 * @throws InterruptedException
 	 */
-	public void shoppingCart() throws InterruptedException {
+	public void shoppingCart()  {
 		this.shoppingCart.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Search button
 	 * @throws InterruptedException
 	 */
-	public void search() throws InterruptedException {
+	public void search()  {
 		this.search.click();
-		Thread.sleep(SLEEP_TIME);
+	
 	}
 	
 	/**
@@ -141,72 +141,72 @@ public class MainPage {
 	 * @param data - user research
 	 * @throws InterruptedException
 	 */
-	public void searchQuery(String data) throws InterruptedException {
+	public void searchQuery(String data)  {
 		this.searchQuery.sendKeys(data);
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Women button
 	 * @throws InterruptedException
 	 */
-	public void women() throws InterruptedException {
+	public void women()  {
 		this.women.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Dresses button
 	 * @throws InterruptedException
 	 */
-	public void dresses() throws InterruptedException {
+	public void dresses()  {
 		this.dresses.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the tShirtsMenu button
 	 * @throws InterruptedException
 	 */
-	public void tshirtsMenu() throws InterruptedException {
+	public void tshirtsMenu()  {
 		this.tshirtsMenu.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Shop button
 	 * @throws InterruptedException
 	 */
-	public void shopButton() throws InterruptedException {
+	public void shopButton() {
 		this.shopButton.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Popular button
 	 * @throws InterruptedException
 	 */
-	public void popular() throws InterruptedException {
+	public void popular()  {
 		this.popular.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Best Sellers button
 	 * @throws InterruptedException
 	 */
-	public void bestSellers() throws InterruptedException {
+	public void bestSellers() {
 		this.bestSellers.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Previous button
 	 * @throws InterruptedException
 	 */
-	public void prev() throws InterruptedException {
+	public void prev()  {
 		this.prev.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	
@@ -214,36 +214,36 @@ public class MainPage {
 	 * Click the Next button
 	 * @throws InterruptedException
 	 */
-	public void next() throws InterruptedException {
+	public void next()  {
 		this.next.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Banner 25%OFF Image
 	 * @throws InterruptedException
 	 */
-	public void bannerSeis() throws InterruptedException {
+	public void bannerSeis()  {
 		this.bannerSeis.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Banner 45%OFF Image
 	 * @throws InterruptedException
 	 */
-	public void bannerSiete() throws InterruptedException {
+	public void bannerSiete()  {
 		this.bannerSiete.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the T-shirts button
 	 * @throws InterruptedException
 	 */
-	public void tshirts() throws InterruptedException {
+	public void tshirts() {
 		this.tshirts.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	
@@ -251,35 +251,35 @@ public class MainPage {
 	 * Click the Blouses button
 	 * @throws InterruptedException
 	 */
-	public void blouses() throws InterruptedException {
+	public void blouses()  {
 		this.blouses.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Casual Dresses button
 	 * @throws InterruptedException
 	 */
-	public void casualDresses() throws InterruptedException {
+	public void casualDresses() {
 		this.casualDresses.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Evening Dresses button
 	 * @throws InterruptedException
 	 */
-	public void eveningDresses() throws InterruptedException {
+	public void eveningDresses()  {
 		this.eveningDresses.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 	
 	/**
 	 * Click the Summer Dresses button
 	 * @throws InterruptedException
 	 */
-	public void summerDresses() throws InterruptedException {
+	public void summerDresses()  {
 		this.summerDresses.click();
-		Thread.sleep(SLEEP_TIME);
+		
 	}
 }
