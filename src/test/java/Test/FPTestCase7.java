@@ -28,19 +28,19 @@ public class FPTestCase7 {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	@Test
-	public void AddNewAddress() throws InterruptedException {
+	@Test(enabled = true, groups = {"sanity", "regression"})
+	public void successfullyLogin() throws InterruptedException {
 		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-		
-		//Going to the sign in page
-		mainPage.clicksignIn();
-		
-		// make a successfully login
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		mainPage.clicksignIn();
 		loginPage.enterUserEmail("ya_el1995@hotmail.com");
 		loginPage.enterUserPassword("KnD504012");
 		loginPage.clickSubmitButton();
 		
+	}
+	
+	@Test(dependsOnMethods = { "successfullyLogin" }, groups = {"sanity", "regression"})
+	public void AddNewAddress() throws InterruptedException {
 		//Going to the My Addresses section
 		MyAccountPage myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
 		myAccountPage.clickMyAddresses();
