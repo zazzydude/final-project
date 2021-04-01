@@ -3,8 +3,8 @@
 <testsuite hostname="DESKTOP-7H1JKAI" failures="0" tests="2" name="Test.FPTestCase1" time="8.944" errors="0" timestamp="2021-03-31T12:37:59 CST" skipped="1">
   <testcase classname="Test.FPTestCase1" name="buyArticleSuccessfully" time="8.944"/>
   <system-out/>
-  <testcase classname="Test.FPTestCase1" name="successfullyLogin">
+  <testcase classname="Test.FPTestCase1" name="buyArticleSuccessfully">
     <skipped/>
-  </testcase> <!-- successfullyLogin -->
+  </testcase> <!-- buyArticleSuccessfully -->
   <system-out/>
 </testsuite> <!-- Test.FPTestCase1 -->
