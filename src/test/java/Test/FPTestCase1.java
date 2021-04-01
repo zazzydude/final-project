@@ -1,7 +1,6 @@
 package Test;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -37,6 +36,7 @@ public class FPTestCase1 {
 		loginPage.clickSubmitButton();
 		
 	}
+	
 	
 	@Test(enabled = true)
 	public void buyArticleSuccessfully() throws InterruptedException {
