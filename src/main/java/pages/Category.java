@@ -20,19 +20,16 @@ public class Category {
 	}
 	@FindBy(xpath=".//a[./img[@class='replace-2x'] and @title='Casual Dresses']")
 	WebElement casualDresses ;
-	
-	@FindBy(xpath=".//a[./img[@class='replace-2x'] and @title='Evening Dresses']")
+
+	@FindBy(xpath="(.//a[@title='Evening Dresses'])[3]")
 	WebElement eveningDresses ;
-	
+
 	@FindBy(xpath=".//a[./img[@class='replace-2x'] and @title='Summer Dresses']")
 	WebElement summerDresses ;
-	
-	@FindBy(xpath=".//ul[@class='product_list grid row']/li/.//a[@class='product_img_link']")
-	WebElement dresses[] ;
-	
+
 	@FindBy(xpath="//*[@id=\"header\"]/div[3]/div/div/div[3]/div/a")
 	WebElement cartButton ;
-	
+
 	@FindBy(xpath="//*[@id=\"selectProductSort\"]")
 	WebElement sortBy ;
 	
@@ -61,7 +58,7 @@ public class Category {
 		//Creo una accion para poder hacer un mouseOver a ese articulo
 		Actions ac = new Actions(driver);
 			
-		//revisó si el indice que me paso es de un articulo que existe
+		//revisï¿½ si el indice que me paso es de un articulo que existe
 		if (itemIndex <= productList.size()-1) {
 			//Realizo el moseover
 			ac.moveToElement(productList.get(itemIndex)).perform();
@@ -86,16 +83,16 @@ public class Category {
 		this.casualDresses.click();
 		Thread.sleep(SLEEP_TIME);
 	}
-	
+
 	/**
 	 * Click the evening dresses sub category option
 	 * @throws InterruptedException
 	 */
 	public void clickEveningDresses() throws InterruptedException {
 		this.eveningDresses.click();
-		Thread.sleep(SLEEP_TIME);
+		//Thread.sleep(SLEEP_TIME);
 	}
-	
+
 	/**
 	 * Click the summer dresses sub category option
 	 * @throws InterruptedException
@@ -104,16 +101,76 @@ public class Category {
 		this.summerDresses.click();
 		Thread.sleep(SLEEP_TIME);
 	}
-	
+
 	/**
-	 * Click the summer dresses sub category option
+	 * Clicks the first product in the evening dresses sub category 
+	 * @throws InterruptedException
+	 */
+	public void printedDress() throws InterruptedException {
+		this.printedDress.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+
+	/**
+	 * Clicks the + button to add a product 
+	 * @throws InterruptedException
+	 */
+	public void plusButton() throws InterruptedException {
+		this.plusButton.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+
+	/**
+	 * Clicks the size slider to show the options
+	 * @throws InterruptedException
+	 */
+	public void sizeSelector() throws InterruptedException {
+		this.sizeSelector.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+
+	/**
+	 * Clicks the option L in the dropdown menu
+	 * @throws InterruptedException
+	 */
+	public void sizeL() throws InterruptedException {
+		this.sizeL.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+
+	/**
+	 * Clicks the color pink option 
+	 * @throws InterruptedException
+	 */
+	public void colorSelector() throws InterruptedException {
+		this.colorSelector.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+
+	/**
+	 * Clicks the option add to cart
+	 * @throws InterruptedException
+	 */
+	public void sendToCart() throws InterruptedException {
+		this.sendToCart.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+
+	/**
+	 * Clicks the proceed to checkout button 
+	 * @throws InterruptedException
+	 */
+	public void checkOut() throws InterruptedException {
+		this.checkOut.click();
+		Thread.sleep(SLEEP_TIME);
+	}
+
+	/**
+	 * Clicks the final proceed to checkout button 
 	 * @throws InterruptedException
 	 */
 	public void clickDresses(int i) throws InterruptedException {
 		this.dresses[i].click();
 		Thread.sleep(SLEEP_TIME);
 	}
-	
-	
-	
 }

@@ -162,8 +162,13 @@ public class CreateAccountPage {
 		this.address2TextBox.sendKeys(address2);
 	}
 	
-	public void citiesTextBox (String city) {
-		this.cityTextBox.sendKeys(city);
+
+	
+	
+	public void cityTextBox (String value) {
+		cityTextBox.sendKeys(value);
+		
+	
 	}
 	
 	public void statesDropdown (String value) {
@@ -172,12 +177,9 @@ public class CreateAccountPage {
 		stateSelect.selectByVisibleText(value);
 	}
 	
+	
 	public void zipTextBox (String zipCode) {
 		this.zipCodeTextBox.sendKeys(zipCode);
-	}
-
-	public void ctryDropdown () {
-		this.countryDropdown.click();
 	}
 
 	public void addInfo (String additional) {
