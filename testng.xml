@@ -3,16 +3,16 @@
 <suite name="Suite">
   <test thread-count="4" name="Test">
     <classes>
-    	<class name="test.FPTestCase1"/>
-    	<class name="test.FPTestCase2"/>
-    	<class name="test.FPTestCase3"/>
-    	<class name="test.FPTestCase4"/>
-    	<class name="test.FPTestCase5"/>
-    	<class name="test.FPTestCase6"/>
-      	<class name="test.FPTestCase7"/>
-      	<class name="test.FPTestCase8"/>
-      	<class name="test.FPTestCase9"/>
-      	<class name="test.FPTestCase10"/>
+    	<class name="Test.FPTestCase1"/>
+    	<class name="Test.FPTestCase2"/>
+    	<class name="Test.FPTestCase3"/>
+    	<class name="Test.FPTestCase4"/>
+    	<class name="Test.FPTestCase5"/>
+    	<class name="Test.FPTestCase6"/>
+      	<class name="Test.FPTestCase7"/>
+      	<class name="Test.FPTestCase8"/>
+      	<class name="Test.FPTestCase9"/>
+      	<class name="Test.FPTestCase10"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
