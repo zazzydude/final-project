@@ -5,7 +5,7 @@
     <classes>
       <class name="Test.FPTestCase3">
         <methods>
-          <include name="endSession"/>
+          <include name="login"/>
           <include name="setBaseUrl"/>
           <include name="successfullyLogin"/>
         </methods>

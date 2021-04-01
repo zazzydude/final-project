@@ -19,7 +19,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSession -->
-      </class> <!-- Test.FPTestCase1 -->
+      </class> <!-- Test.FPTestCase4 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
