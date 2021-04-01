@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.FPTestCase8">
+      <class name="Test.FPTestCase4">
         <methods>
-          <include name="login"/>
+          <include name="clickEveningDresses"/>
           <include name="setBaseUrl"/>
           <include name="endSession"/>
+          <include name="productConfig"/>
         </methods>
-      </class> <!-- Test.FPTestCase8 -->
+      </class> <!-- Test.FPTestCase4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
