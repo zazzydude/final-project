@@ -3,13 +3,15 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class CreateAccountPage {
-	final WebDriver driver;
+	
 	final int SLEEP_TIME = 1500;
-	public CreateAccountPage (WebDriver driver) {
-		this.driver=driver;
+	public CreateAccountPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
 	}
+
 	
 	@FindBy(xpath="//*[@id='header_logo']/a")
 	WebElement homeButton;
