@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class Product {
@@ -11,6 +12,7 @@ public class Product {
 	final int SLEEP_TIME = 1500;
 	
 	public Product(WebDriver driver){
+		PageFactory.initElements(driver, this);
 		this.driver = driver;	
 	}
 	
@@ -47,8 +49,8 @@ public class Product {
 	@FindBy(xpath="(.//ul[@id='color_to_pick_list']/li/a)[4]")
 	WebElement color4;
 	
-	@FindBy(id="uniform-group_1")
-	Select sizeSelect;
+	@FindBy(id="group_1")
+	WebElement sizeSelect;
 	
 	@FindBy(xpath=".//a[@title='Proceed to checkout']")
 	WebElement poceedCheckoutButton;
@@ -59,13 +61,23 @@ public class Product {
 	@FindBy(xpath="//p[@id='add_to_cart']/button")
 	WebElement addToCartButton;
 	
+	@FindBy(xpath = "/html/body/div/div[2]/div/div[3]/div/div/div/div[4]/form/div/div[3]/p/a")
+	WebElement wishList;
+	
+	public void makeWish() {
+		wishList.click();
+	}
+	
+	public void clickPlusButton() {
+		plusButton.click();
+	}
+	
 	/**
 	 * this method receives the quantity of products you want to buy
 	 * @param quantity
 	 * @throws InterruptedException
 	 */
-	public void enterQuantity(int quantity) throws InterruptedException {
-		String num = "" + quantity;
+	public void enterQuantity(String num) throws InterruptedException {
 		quantityTextBox.sendKeys(num);
 		Thread.sleep(SLEEP_TIME);
 	}
@@ -76,7 +88,8 @@ public class Product {
 	 * @throws InterruptedException
 	 */
 	public void selectSize(int index) throws InterruptedException {
-		sizeSelect.selectByIndex(index);
+		Select sizeDropdown = new Select(sizeSelect);
+		sizeDropdown.selectByIndex(index);
 		Thread.sleep(SLEEP_TIME);
 	}
 	 /**
