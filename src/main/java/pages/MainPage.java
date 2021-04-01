@@ -2,15 +2,16 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MainPage {
-
-	
+	final WebDriver driver;
 
 	public MainPage(WebDriver driver){
 		PageFactory.initElements(driver, this);
+		this.driver = driver;
 	}
 
 	@FindBy(xpath=".//a[@class='login']")
@@ -81,6 +82,25 @@ public class MainPage {
 	
 	@FindBy(xpath=".//a[@class='login']")
 	WebElement signIn;
+	
+			
+	
+	@FindBy(xpath = "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[2]/li[1]/div/div[2]/div[2]/a[2]")
+	WebElement more;
+		
+	@FindBy(xpath = "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[2]/li[1]")
+	WebElement p1;
+		
+	public void selectItem() {
+		//Creo una accion para poder hacer un mouseOver a ese articulo
+		Actions ac = new Actions(driver);
+		ac.moveToElement(p1).perform();
+		more.click();
+	}
+	
+	public void bestSeller(){
+		this.bestSellers.click();
+	}
 	
 	/**
 	 * Click the Sign in button

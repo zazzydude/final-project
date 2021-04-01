@@ -3,12 +3,14 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class CreateAccountPage {
-	final WebDriver driver;
+	//final WebDriver driver;
 	final int SLEEP_TIME = 1500;
 	public CreateAccountPage (WebDriver driver) {
-		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(xpath="//*[@id='header_logo']/a")
@@ -117,16 +119,19 @@ public class CreateAccountPage {
 		this.passwordTextBox.sendKeys(password);
 	}
 	
-	public void daysDropdown () {
-		this.dayDropdown.click();
+	public void daysDropdown (int index) {
+		Select daySelect = new Select(dayDropdown);
+		daySelect.selectByIndex(index);
 	}
 	
-	public void monthsDropdown () {
-		this.monthDropdown.click();
+	public void monthsDropdown (int index) {
+		Select monthSelect = new Select(monthDropdown);
+		monthSelect.selectByIndex(index);
 	}
 	
-	public void yearsDropdown () {
-		this.yearDropdown.click();
+	public void yearsDropdown (String value) {
+		Select yearSelect = new Select(yearDropdown);
+		yearSelect.selectByValue(value);;
 	}
 	
 	public void newsLetterCheckBox () {
@@ -157,20 +162,24 @@ public class CreateAccountPage {
 		this.address2TextBox.sendKeys(address2);
 	}
 	
-	public void citiesTextBox (String city) {
-		this.cityTextBox.sendKeys(city);
+
+	
+	
+	public void cityTextBox (String value) {
+		cityTextBox.sendKeys(value);
+		
+	
 	}
 	
-	public void statesDropdown () {
-		this.stateDropdown.click();
+	public void statesDropdown (String value) {
+		Select stateSelect = new Select(stateDropdown);
+		//stateSelect.selectByValue(value);
+		stateSelect.selectByVisibleText(value);
 	}
+	
 	
 	public void zipTextBox (String zipCode) {
 		this.zipCodeTextBox.sendKeys(zipCode);
-	}
-
-	public void ctryDropdown () {
-		this.countryDropdown.click();
 	}
 
 	public void addInfo (String additional) {
@@ -186,6 +195,7 @@ public class CreateAccountPage {
 	}
 
 	public void addressAliasTextBox (String addressAlias) {
+		this.addressAliasTextBox.clear();
 		this.addressAliasTextBox.sendKeys(addressAlias);
 	}
 
