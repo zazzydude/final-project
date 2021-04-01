@@ -1,6 +1,4 @@
 /target/**
 /test-output/**
 /target/
-/test-output
 /test-output/
-src/main/java/pages/Product.java
