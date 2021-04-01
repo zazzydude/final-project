@@ -33,7 +33,7 @@ WebDriver driver;
 		LoginPage loginPage = new LoginPage(driver);
 		mainPage.clicksignIn();
 		loginPage.enterUserEmail("ya_el1995@hotmail.com");
-		loginPage.enterUserPassword("54321");
+		loginPage.enterUserPassword("KnD504012");
 		loginPage.clickSubmitButton();
 		
 	}
@@ -48,7 +48,7 @@ WebDriver driver;
 		LoginPage loginPage = new LoginPage(driver);
 		mainPage.clicksignIn();
 		loginPage.enterUserEmail("ya_el1995@hotmail.com");
-		loginPage.enterUserPassword("54");
+		loginPage.enterUserPassword("12345");
 		loginPage.clickSubmitButton();
 		
 	}

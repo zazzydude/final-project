@@ -38,7 +38,7 @@ public class FPTestCase8 {
 		CreateAccountPage createaccountpage = new CreateAccountPage(driver);
 		mainPage.clicksignIn();
 		loginPage.enterUserEmail("ya_el1995@hotmail.com");
-		loginPage.enterUserPassword("54321");
+		loginPage.enterUserPassword("KnD504012");
 		loginPage.clickSubmitButton();
 		accountpurchase.personalInfoB();
 		createaccountpage.mrRadioButton();
@@ -47,11 +47,11 @@ public class FPTestCase8 {
 		accountpurchase.confirmationPassword("12345");
 		accountpurchase.saveButton();
 		Thread.sleep(3000);
-		//accountpurchase.personalInfoB();
+		driver.navigate().refresh();
 		createaccountpage.mrRadioButton();
-		accountpurchase.currentPassword("KnD504012");
-		accountpurchase.newPassword("54321");
-		accountpurchase.confirmationPassword("54321");
+		accountpurchase.currentPassword("12345");
+		accountpurchase.newPassword("KnD504012");
+		accountpurchase.confirmationPassword("KnD504012");
 		accountpurchase.saveButton();
 		Thread.sleep(3000);
 	
