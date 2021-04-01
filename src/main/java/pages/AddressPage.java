@@ -3,16 +3,15 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class AddressPage {
-	final WebDriver driver;
-	final int SLEEP_TIME = 1500;
-	
+
 	public AddressPage(WebDriver driver) {
-		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(id="firstname")
 	WebElement firstNameTextBox;
 	
@@ -63,7 +62,6 @@ public class AddressPage {
 	public void enterFirstName(String name) throws InterruptedException {
 		this.firstNameTextBox.clear();
 		this.firstNameTextBox.sendKeys(name);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -74,7 +72,6 @@ public class AddressPage {
 	public void enterLastName(String lastName) throws InterruptedException {
 		this.lastNameTextBox.clear();
 		this.lastNameTextBox.sendKeys(lastName);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -85,7 +82,6 @@ public class AddressPage {
 	public void enterCompany(String company) throws InterruptedException {
 		this.companyTextBox.clear();
 		this.companyTextBox.sendKeys(company);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -96,7 +92,6 @@ public class AddressPage {
 	public void enterAddress(String address) throws InterruptedException {
 		this.address1TextBox.clear();
 		this.address1TextBox.sendKeys(address);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -107,7 +102,6 @@ public class AddressPage {
 	public void enterAddressLine2(String address2) throws InterruptedException {
 		this.address2TextBox.clear();
 		this.address2TextBox.sendKeys(address2);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -118,7 +112,6 @@ public class AddressPage {
 	public void enterCity(String city) throws InterruptedException {
 		this.cityTextBox.clear();
 		this.cityTextBox.sendKeys(city);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -129,7 +122,6 @@ public class AddressPage {
 	public void selectState(int option) throws InterruptedException {
 		Select stateSelect = new Select(this.idStateSelect);
 		stateSelect.selectByIndex(option);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -140,7 +132,6 @@ public class AddressPage {
 	public void selectState(String option) throws InterruptedException {
 		Select stateSelect = new Select(this.idStateSelect);
 		stateSelect.selectByVisibleText(option);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -151,7 +142,6 @@ public class AddressPage {
 	public void enterPostalCode(String postCode) throws InterruptedException {
 		this.postCodeTextBox.clear();
 		this.postCodeTextBox.sendKeys(postCode);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -162,7 +152,6 @@ public class AddressPage {
 	public void selectCountry(int option) throws InterruptedException {
 		Select countrySelect = new Select(this.idCountrySelect);
 		countrySelect.selectByIndex(option);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -173,7 +162,6 @@ public class AddressPage {
 	public void selectCountry(String option) throws InterruptedException {
 		Select countrySelect = new Select(this.idCountrySelect);
 		countrySelect.selectByVisibleText(option);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -184,7 +172,6 @@ public class AddressPage {
 	public void enterHomePhone(String phone) throws InterruptedException {
 		this.phoneTextBox.clear();
 		this.phoneTextBox.sendKeys(phone);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -195,7 +182,6 @@ public class AddressPage {
 	public void enterMobilePhone(String phone) throws InterruptedException {
 		this.phoneMobileTextBox.clear();
 		this.phoneMobileTextBox.sendKeys(phone);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -206,7 +192,6 @@ public class AddressPage {
 	public void enterAdditionalInformation(String info) throws InterruptedException {
 		this.otherTextBox.clear();
 		this.otherTextBox.sendKeys(info);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -217,7 +202,6 @@ public class AddressPage {
 	public void enterAddressTitle(String title) throws InterruptedException {
 		this.aliasTextBox.clear();
 		this.aliasTextBox.sendKeys(title);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -226,6 +210,5 @@ public class AddressPage {
 	 */
 	public void clickSaveButton() throws InterruptedException {
 		this.submitAddressButton.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 }

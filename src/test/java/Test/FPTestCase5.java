@@ -8,11 +8,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import pages.CartPage;
 import pages.LoginPage;
 import pages.MainPage;
-import pages.ProductPage;
+import pages.MyAccountPage;
+import pages.MyAccountPage.navBar;
 
-public class FPTestCase6 {
+public class FPTestCase5 {
 	WebDriver driver;
 	
 	@BeforeTest
@@ -26,31 +28,43 @@ public class FPTestCase6 {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
+
+	
 	@Test(
-		description = "Add a product to a wishlist",
+		enabled = true,
+		description = "Make a purchase when user are already sign-in",
 		groups = {}
 	)
-	public void successfullyLogin() throws InterruptedException {
+	public void buyArticleSuccessfully() throws InterruptedException {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
-		ProductPage pro = new ProductPage(driver);
+		CartPage cart = new CartPage(driver);
 		
 		mainPage.clicksignIn();
-		loginPage.enterUserEmail("sergio12345@gmail.com");
-		loginPage.enterUserPassword("00000");
+		loginPage.enterUserEmail("none@nonenone.com");
+		loginPage.enterUserPassword("Therion255");
 		loginPage.clickSubmitButton();
 		
-		mainPage.logoImage();
-		mainPage.bestSellers();
-		mainPage.selectItem();
-		pro.makeWish();
+		MyAccountPage accP = new MyAccountPage(driver);
+		accP.getNavBarOptions(navBar.DRESSES).click();
+
 		
+		//cart.clickProduct();
+		//Thread.sleep(3000);	
+		//cart.clickEvening();
+		cart.selectitem();
+		
+		cart.clickProceed1();
+		cart.clickProceed2();
+		cart.clickProceed3();
+		cart.clickCbAgree();
+		cart.clickProceed4();
+		cart.clickPayBankWire();
+		cart.clickNavCart();
 	}
-	
-	
+
 	@AfterTest
-	public void endSession() throws InterruptedException {
-		Thread.sleep(10000);
+	public void endSession() {
 		driver.quit();
 	}
 }

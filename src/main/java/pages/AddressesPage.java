@@ -3,13 +3,12 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class AddressesPage {
-	final WebDriver driver;
-	final int SLEEP_TIME = 3500;
 	
 	public AddressesPage(WebDriver driver) {
-		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(xpath=".//a[@href='http://automationpractice.com/index.php?controller=address']")
@@ -21,6 +20,5 @@ public class AddressesPage {
 	 */
 	public void clickAddNewAddressButton() throws InterruptedException {
 		this.addNewAddressButton.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 }

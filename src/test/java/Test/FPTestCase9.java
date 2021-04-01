@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -9,8 +9,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pages.Cart;
-import pages.Category;
+import pages.CartPage;
+import pages.CategoryPage;
 import pages.CreateAccountPage;
 import pages.LoginPage;
 import pages.MainPage;
@@ -28,11 +28,15 @@ public class FPTestCase9 {
 		 entre cada uno de los pasos*/
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
+	
 	/**
-	 * Methos of the FPTC11.1
+	 * Method of the FPTC11.1
 	 * @throws InterruptedException
 	 */
-	@Test
+	@Test(
+		description = "Successfully creation of a new account and make a purchase",
+		groups = {}
+	)
 	public void createAccontAndBuyArticle() throws InterruptedException {
 		java.util.Date fecha = new Date();
 		String s1= String.valueOf(fecha);
@@ -41,8 +45,8 @@ public class FPTestCase9 {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		CreateAccountPage createAccount = new CreateAccountPage(driver);
-		Category catPage = new Category(driver);
-		Cart cart = new Cart(driver);
+		CategoryPage catPage = new CategoryPage(driver);
+		CartPage cart = new CartPage(driver);
 		
 		//click on Sign in
 		mainPage.clicksignIn();
@@ -59,7 +63,7 @@ public class FPTestCase9 {
 		createAccount.yearsDropdown("1958");
 		createAccount.addressTextBox1("Calma 123");
 		createAccount.citiesTextBox("Edingburg");
-		createAccount.statesDropdown("Texas");
+		createAccount.selectStateDropDown("Texas");
 		createAccount.zipTextBox("12345");
 		createAccount.mobileTextBox("8180296420");
 		createAccount.addressAliasTextBox("Home");

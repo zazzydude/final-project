@@ -5,12 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AccountPurchase{
-	final int SLEEP_TIME = 1500;
-
-	public AccountPurchase(WebDriver driver) {
+public class AccountPurchasePage {
+	
+	public AccountPurchasePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+	
 	@FindBy(xpath=".//a[./img[@class='replace-2x'] and @title='Casual Dresses']")
 	WebElement casualDresses ;
 
@@ -44,7 +44,7 @@ public class AccountPurchase{
 	}
 	
 	/**
-	 * Clicks the Current Password textbox
+	 * Clicks the Current Password text box
 	 * @throws InterruptedException
 	 */
 	public void currentPassword(String name) {
@@ -52,7 +52,7 @@ public class AccountPurchase{
 	}
 	
 	/**
-	 * Clicks the New Password textbox
+	 * Clicks the New Password text box
 	 * @throws InterruptedException
 	 */
 	public void newPassword(String name) {
@@ -60,7 +60,7 @@ public class AccountPurchase{
 	}
 	
 	/**
-	 * Clicks the Confirmation Password textbox
+	 * Clicks the Confirmation Password text box
 	 * @throws InterruptedException
 	 */
 	public void confirmationPassword(String name) {
@@ -74,8 +74,4 @@ public class AccountPurchase{
 	public void saveButton() {
 		this.saveButton.click();
 	}
-	
-
-
-	
 }

@@ -8,14 +8,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class MyAccountPage {
-
+	
 	public enum navBar {
 		WOMEN,
 		DRESSES,
 		TSHIRT
 	}
-	
-	final int SLEEP_TIME = 1500;
 	
 	public MyAccountPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -73,7 +71,6 @@ public class MyAccountPage {
 	 */
 	public void clickOrderHistoryDetails() throws InterruptedException {
 		this.orderHistoryDetails.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	
@@ -83,7 +80,6 @@ public class MyAccountPage {
 	 */
 	public void clickmyWishLists() throws InterruptedException {
 		this.myWishLists.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	
@@ -93,7 +89,6 @@ public class MyAccountPage {
 	 */
 	public void clickMyCreditSlips() throws InterruptedException {
 		this.myCreditSlips.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	
@@ -103,7 +98,6 @@ public class MyAccountPage {
 	 */
 	public void clickMyAddresses() throws InterruptedException {
 		this.myAddresses.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	
@@ -113,8 +107,5 @@ public class MyAccountPage {
 	 */
 	public void clickMyPersonalInformation() throws InterruptedException {
 		this.myPersonalInformation.click();
-		Thread.sleep(SLEEP_TIME);
 	}
-
-
 }

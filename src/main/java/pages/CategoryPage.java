@@ -1,5 +1,4 @@
 package pages;
-//Git test 1t;
 
 import java.util.List;
 
@@ -9,15 +8,14 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Category {
-	
-	final int SLEEP_TIME = 1500;
+public class CategoryPage {
 	final WebDriver driver;
 	
-	public Category(WebDriver driver) {
+	public CategoryPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}
+	
 	@FindBy(xpath=".//a[./img[@class='replace-2x'] and @title='Casual Dresses']")
 	WebElement casualDresses ;
 
@@ -32,13 +30,30 @@ public class Category {
 
 	@FindBy(xpath="//*[@id=\"selectProductSort\"]")
 	WebElement sortBy ;
-	
-	
-	@FindBy(xpath = "//*[@id='center_column']/ul/li[1]")
-	WebElement dress1;
-	
-	@FindBy(xpath = "/html/body/div/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[2]/div[2]/a[1]")
-	WebElement addcart1;
+
+	@FindBy(xpath="//*[@id=\'center_column\']/ul/li/div/div[2]/h5/a")
+	WebElement printedDress ;
+
+	@FindBy(xpath="//*[@id=\"quantity_wanted_p\"]/a[2]")
+	WebElement plusButton ;
+
+	@FindBy(xpath="//*[@id=\"group_1\"]/option[3]")
+	WebElement sizeL ;
+
+	@FindBy(xpath="//*[@id=\"group_1\"]")
+	WebElement sizeSelector ;
+
+	@FindBy(xpath="//*[@id=\"color_24\"]")
+	WebElement colorSelector ;
+
+	@FindBy(xpath="//*[@id=\"add_to_cart\"]/button/span")
+	WebElement sendToCart ;
+
+	@FindBy(xpath="//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
+	WebElement checkOut ;
+
+	@FindBy(xpath="//*[@id=\"center_column\"]/p[2]/a[1]")
+	WebElement checkOutFinal ;
 	
 	//Doy click en proceed to checkout
 	@FindBy(xpath = "/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a")
@@ -48,17 +63,17 @@ public class Category {
 	@FindBy(xpath = "//ul[@class = 'product_list grid row']/li")
 	//Esta es la lista de articulos
 	List<WebElement> productList;
-		
+	
 	//Guardo todos los botones de add to cart, son 7
 	@FindBy(xpath = "//span[text()='Add to cart']")
 	List<WebElement> addCart;
-	
+		
 	//Envio el indice de el articulo que quiero
 	public void selectItem(int itemIndex) {
 		//Creo una accion para poder hacer un mouseOver a ese articulo
 		Actions ac = new Actions(driver);
 			
-		//revis� si el indice que me paso es de un articulo que existe
+		//revisa si el indice que me paso es de un articulo que existe
 		if (itemIndex <= productList.size()-1) {
 			//Realizo el moseover
 			ac.moveToElement(productList.get(itemIndex)).perform();
@@ -74,14 +89,13 @@ public class Category {
 	public void clickProceed() {
 		proceedToCheckout.click();
 	}
-	
+
 	/**
 	 * Click the casual dresses sub category option
 	 * @throws InterruptedException
 	 */
 	public void clickCasualDresses() throws InterruptedException {
 		this.casualDresses.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -90,7 +104,6 @@ public class Category {
 	 */
 	public void clickEveningDresses() throws InterruptedException {
 		this.eveningDresses.click();
-		//Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -99,7 +112,6 @@ public class Category {
 	 */
 	public void clickSummerDresses() throws InterruptedException {
 		this.summerDresses.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -108,7 +120,6 @@ public class Category {
 	 */
 	public void printedDress() throws InterruptedException {
 		this.printedDress.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -117,7 +128,6 @@ public class Category {
 	 */
 	public void plusButton() throws InterruptedException {
 		this.plusButton.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -126,7 +136,6 @@ public class Category {
 	 */
 	public void sizeSelector() throws InterruptedException {
 		this.sizeSelector.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -135,7 +144,6 @@ public class Category {
 	 */
 	public void sizeL() throws InterruptedException {
 		this.sizeL.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -144,7 +152,6 @@ public class Category {
 	 */
 	public void colorSelector() throws InterruptedException {
 		this.colorSelector.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -153,7 +160,6 @@ public class Category {
 	 */
 	public void sendToCart() throws InterruptedException {
 		this.sendToCart.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
@@ -162,15 +168,15 @@ public class Category {
 	 */
 	public void checkOut() throws InterruptedException {
 		this.checkOut.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 	/**
 	 * Clicks the final proceed to checkout button 
 	 * @throws InterruptedException
 	 */
-	public void clickDresses(int i) throws InterruptedException {
-		this.dresses[i].click();
-		Thread.sleep(SLEEP_TIME);
+	public void checkOutFinal() throws InterruptedException {
+		this.checkOutFinal.click();
 	}
+	
+	
 }

@@ -1,10 +1,9 @@
-package Test;
+package test;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -15,9 +14,8 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.MyAccountPage;
 
-
 public class FPTestCase7 {
-	WebDriver driver;
+WebDriver driver;
 	
 	@BeforeTest
 	public void setBaseUrl() {
@@ -28,29 +26,35 @@ public class FPTestCase7 {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	@Test(enabled = true, groups = {"sanity", "regression"})
+	@Test(
+		groups = {"sanity", "regression"},
+		description = "Login user with a correct username and password"
+	)
 	public void successfullyLogin() throws InterruptedException {
-		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		MainPage mainPage = new MainPage(driver);
+		LoginPage loginPage = new LoginPage(driver);
 		mainPage.clicksignIn();
-		loginPage.enterUserEmail("ya_el1995@hotmail.com");
-		loginPage.enterUserPassword("KnD504012");
+		loginPage.enterUserEmail("sergio12345@gmail.com");
+		loginPage.enterUserPassword("00000");
 		loginPage.clickSubmitButton();
-		
 	}
 	
-	@Test(dependsOnMethods = { "successfullyLogin" }, groups = {"sanity", "regression"})
+	@Test(
+		dependsOnMethods = { "successfullyLogin" }, 
+		groups = {"sanity", "regression"},
+		description = "Add a new address"
+	)
 	public void AddNewAddress() throws InterruptedException {
 		//Going to the My Addresses section
-		MyAccountPage myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
+		MyAccountPage myAccountPage = new MyAccountPage(driver);
 		myAccountPage.clickMyAddresses();
 		
 		//Hit the Add New Address button
-		AddressesPage addressesPage = PageFactory.initElements(driver, AddressesPage.class);
+		AddressesPage addressesPage = new AddressesPage(driver);
 		addressesPage.clickAddNewAddressButton();
 		
 		//Writing all the necessary info for the new address
-		AddressPage addressPage = PageFactory.initElements(driver, AddressPage.class);
+		AddressPage addressPage = new AddressPage(driver);
 		addressPage.enterFirstName("Yael");
 		addressPage.enterLastName("Santana");
 		addressPage.enterCompany("Accenture");

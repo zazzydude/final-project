@@ -6,12 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-	
-	
-	
-	public LoginPage (WebDriver driver) {
-		//Puse aqui el initElements para que cada vez que creemos una instancia de esta clase
-		// Se inicialice nuestros elementos
+
+	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -39,7 +35,6 @@ public class LoginPage {
 	 * @throws InterruptedException
 	 */
 	public void enterUserEmail(String email) {
-		//Quite todos los waits por que con el implicit wait ya no son necesarios
 		this.emailTextBox.sendKeys(email);
 		
 	}

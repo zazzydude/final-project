@@ -7,9 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CreateAccountPage {
-	//final WebDriver driver;
-	final int SLEEP_TIME = 1500;
-	public CreateAccountPage (WebDriver driver) {
+
+	public CreateAccountPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -162,24 +161,27 @@ public class CreateAccountPage {
 		this.address2TextBox.sendKeys(address2);
 	}
 	
-
-	
-	
-	public void cityTextBox (String value) {
-		cityTextBox.sendKeys(value);
-		
-	
+	public void citiesTextBox (String city) {
+		this.cityTextBox.sendKeys(city);
 	}
 	
-	public void statesDropdown (String value) {
+	public void selectStateDropDown(int option)  {
+		Select stateSelect = new Select(stateDropdown);
+		stateSelect.selectByIndex(option);
+	}
+	
+	public void selectStateDropDown(String value) {
 		Select stateSelect = new Select(stateDropdown);
 		//stateSelect.selectByValue(value);
 		stateSelect.selectByVisibleText(value);
 	}
 	
-	
 	public void zipTextBox (String zipCode) {
 		this.zipCodeTextBox.sendKeys(zipCode);
+	}
+
+	public void ctryDropdown () {
+		this.countryDropdown.click();
 	}
 
 	public void addInfo (String additional) {
@@ -195,7 +197,6 @@ public class CreateAccountPage {
 	}
 
 	public void addressAliasTextBox (String addressAlias) {
-		this.addressAliasTextBox.clear();
 		this.addressAliasTextBox.sendKeys(addressAlias);
 	}
 

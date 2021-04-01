@@ -6,16 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class Product {
-	
-	final WebDriver driver;
-	final int SLEEP_TIME = 1500;
-	
-	public Product(WebDriver driver){
+public class ProductPage {
+
+	public ProductPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		this.driver = driver;	
 	}
-	
+
 	@FindBy(id = "quantity_wanted")
 	WebElement quantityTextBox;
 	
@@ -79,7 +75,6 @@ public class Product {
 	 */
 	public void enterQuantity(String num) throws InterruptedException {
 		quantityTextBox.sendKeys(num);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -90,7 +85,6 @@ public class Product {
 	public void selectSize(int index) throws InterruptedException {
 		Select sizeDropdown = new Select(sizeSelect);
 		sizeDropdown.selectByIndex(index);
-		Thread.sleep(SLEEP_TIME);
 	}
 	 /**
 	  * this method select the color of the product
@@ -115,7 +109,6 @@ public class Product {
 				color1.click();
 				break;
 		}
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
@@ -124,6 +117,5 @@ public class Product {
 	 */
 	public void clickOnAddCart() throws InterruptedException {
 		addToCartButton.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 }

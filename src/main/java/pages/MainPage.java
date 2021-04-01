@@ -8,12 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainPage {
 	final WebDriver driver;
-
-	public MainPage(WebDriver driver){
+	
+	public MainPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
 	}
-
+	
 	@FindBy(xpath=".//a[@class='login']")
 	WebElement singIn;
 	
@@ -83,8 +83,6 @@ public class MainPage {
 	@FindBy(xpath=".//a[@class='login']")
 	WebElement signIn;
 	
-			
-	
 	@FindBy(xpath = "/html/body/div/div[2]/div/div[2]/div/div[1]/ul[2]/li[1]/div/div[2]/div[2]/a[2]")
 	WebElement more;
 		
@@ -96,10 +94,6 @@ public class MainPage {
 		Actions ac = new Actions(driver);
 		ac.moveToElement(p1).perform();
 		more.click();
-	}
-	
-	public void bestSeller(){
-		this.bestSellers.click();
 	}
 	
 	/**

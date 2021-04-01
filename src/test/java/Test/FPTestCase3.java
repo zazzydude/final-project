@@ -1,11 +1,10 @@
-package Test;
+package test;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,10 +13,8 @@ import pages.CreateAccountPage;
 import pages.LoginPage;
 import pages.MainPage;
 
-
-public class FPTestCase3 
-{
-WebDriver driver;
+public class FPTestCase3 {
+	WebDriver driver;
 	
 	@BeforeTest
 	public void setBaseUrl() throws InterruptedException 
@@ -26,13 +23,13 @@ WebDriver driver;
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();
-		/* implicit wait= de no ser posible realizar algun paso, espera hasta 10 segundos(en este caso)
-		 entre cada uno de los pasos*/
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		PageFactory.initElements(driver, this);
 	}
 	
-	@Test
+	@Test(
+		description = "Creation of a new account with an inexisting email account",
+		groups = {}
+	)
 	public void successfullyLogin() throws InterruptedException {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
@@ -65,7 +62,7 @@ WebDriver driver;
 		createAccountPage.companyTextBox ("Graphics Inc");
 		createAccountPage.addressTextBox1 ("Calle 4 1050");
 		createAccountPage.addressTextBox2 ("Departamento 3A");
-		createAccountPage.cityTextBox ("Monterrey");
+		createAccountPage.citiesTextBox ("Monterrey");
 		createAccountPage.selectStateDropDown(2);
 		createAccountPage.zipTextBox ("66532");
 		createAccountPage.addInfo ("Departamento en tercer piso al lado derecho de las escaleras");
@@ -75,18 +72,10 @@ WebDriver driver;
 		createAccountPage.regisButton ();
 		
 	}
-	
-	
 
 	@AfterTest
 	public void endSession()
 	{
-		//driver.quit();
+		driver.quit();
 	}
-
-
-
-
-
-
 }
