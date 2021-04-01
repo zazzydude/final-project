@@ -50,7 +50,6 @@ public class FPTestCase6 {
 	
 	@AfterTest
 	public void endSession() throws InterruptedException {
-		Thread.sleep(10000);
 		driver.quit();
 	}
 }

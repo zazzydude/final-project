@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="4" name="Test">
+  <test name="Test 1">
     <classes>
-    	<class name="test.FPTestCase1"/>
-    	<class name="test.FPTestCase2"/>
-    	<class name="test.FPTestCase3"/>
-    	<class name="test.FPTestCase4"/>
-    	<class name="test.FPTestCase5"/>
-    	<class name="test.FPTestCase6"/>
-      	<class name="test.FPTestCase7"/>
-      	<class name="test.FPTestCase8"/>
-      	<class name="test.FPTestCase9"/>
-      	<class name="test.FPTestCase10"/>
+    	<class name="Test.FPTestCase1"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 2">
+    <classes>
+    	<class name="Test.FPTestCase2"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 3">
+    <classes>
+    	<class name="Test.FPTestCase3"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 4">
+    <classes>
+    	<class name="Test.FPTestCase4"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 5">
+    <classes>
+    	<class name="Test.FPTestCase5"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 6">
+    <classes>
+    	<class name="Test.FPTestCase6"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 7">
+    <classes>
+		<class name="Test.FPTestCase7"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 8">
+    <classes>
+		<class name="Test.FPTestCase8"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 9">
+    <classes>
+		<class name="Test.FPTestCase9"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test 10">
+    <classes>
+		<class name="Test.FPTestCase10"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

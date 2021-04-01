@@ -1,81 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-04-01T10:53:10 CST" name="Default suite" finished-at="2021-04-01T10:53:17 CST" duration-ms="7083">
+  <suite started-at="2021-04-01T14:00:26 CST" name="Suite" finished-at="2021-04-01T14:03:18 CST" duration-ms="172128">
     <groups>
+      <group name="regression">
+        <method signature="FPTestCase1.successfullyLogin()[pri:1, instance:Test.FPTestCase1@4e91d63f]" name="successfullyLogin" class="Test.FPTestCase1"/>
+        <method signature="FPTestCase1.unsuccessfullyLogin()[pri:0, instance:Test.FPTestCase1@4e91d63f]" name="unsuccessfullyLogin" class="Test.FPTestCase1"/>
+        <method signature="FPTestCase7.successfullyLogin()[pri:0, instance:Test.FPTestCase7@63021689]" name="successfullyLogin" class="Test.FPTestCase7"/>
+        <method signature="FPTestCase7.AddNewAddress()[pri:0, instance:Test.FPTestCase7@63021689]" name="AddNewAddress" class="Test.FPTestCase7"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="FPTestCase1.successfullyLogin()[pri:1, instance:Test.FPTestCase1@4e91d63f]" name="successfullyLogin" class="Test.FPTestCase1"/>
+        <method signature="FPTestCase1.unsuccessfullyLogin()[pri:0, instance:Test.FPTestCase1@4e91d63f]" name="unsuccessfullyLogin" class="Test.FPTestCase1"/>
+        <method signature="FPTestCase7.successfullyLogin()[pri:0, instance:Test.FPTestCase7@63021689]" name="successfullyLogin" class="Test.FPTestCase7"/>
+        <method signature="FPTestCase7.AddNewAddress()[pri:0, instance:Test.FPTestCase7@63021689]" name="AddNewAddress" class="Test.FPTestCase7"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2021-04-01T10:53:10 CST" name="Default test" finished-at="2021-04-01T10:53:17 CST" duration-ms="7083">
-      <class name="test.FPTestCase8">
-        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:test.FPTestCase8@1a04f701]" started-at="2021-04-01T10:53:10 CST" name="setBaseUrl" finished-at="2021-04-01T10:53:17 CST" duration-ms="6698" status="PASS">
+    <test started-at="2021-04-01T14:00:26 CST" name="Test 1" finished-at="2021-04-01T14:00:38 CST" duration-ms="11714">
+      <class name="Test.FPTestCase1">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase1@4e91d63f]" started-at="2021-04-01T14:00:26 CST" name="setBaseUrl" finished-at="2021-04-01T14:00:32 CST" duration-ms="5598" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBaseUrl -->
-        <test-method signature="login()[pri:0, instance:test.FPTestCase8@1a04f701]" started-at="2021-04-01T10:53:17 CST" name="login" description="Update my personal information (change password)" finished-at="2021-04-01T10:53:17 CST" duration-ms="10" status="FAIL">
-          <exception class="java.lang.Error">
-            <message>
-              <![CDATA[Unresolved compilation problems: 
-MainPage cannot be resolved to a type
-MainPage cannot be resolved to a type
-LoginPage cannot be resolved to a type
-LoginPage cannot be resolved to a type
-AccountPurchasePage cannot be resolved to a type
-AccountPurchasePage cannot be resolved to a type
-CreateAccountPage cannot be resolved to a type
-CreateAccountPage cannot be resolved to a type
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-MainPage cannot be resolved to a type
-MainPage cannot be resolved to a type
-LoginPage cannot be resolved to a type
-LoginPage cannot be resolved to a type
-AccountPurchasePage cannot be resolved to a type
-AccountPurchasePage cannot be resolved to a type
-CreateAccountPage cannot be resolved to a type
-CreateAccountPage cannot be resolved to a type
-
-at test.FPTestCase8.login(FPTestCase8.java:35)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:764)
-at org.testng.TestRunner.run(TestRunner.java:585)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+        <test-method signature="unsuccessfullyLogin()[pri:0, instance:Test.FPTestCase1@4e91d63f]" started-at="2021-04-01T14:00:32 CST" name="unsuccessfullyLogin" description="Unsuccessfully login with an incorrect password" finished-at="2021-04-01T14:00:34 CST" duration-ms="2406" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="endSession()[pri:0, instance:test.FPTestCase8@1a04f701]" started-at="2021-04-01T10:53:17 CST" name="endSession" finished-at="2021-04-01T10:53:17 CST" duration-ms="322" status="PASS">
+        </test-method> <!-- unsuccessfullyLogin -->
+        <test-method signature="successfullyLogin()[pri:1, instance:Test.FPTestCase1@4e91d63f]" started-at="2021-04-01T14:00:34 CST" name="successfullyLogin" description="Successfully login with a correct username and password" finished-at="2021-04-01T14:00:37 CST" duration-ms="3396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfullyLogin -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase1@4e91d63f]" started-at="2021-04-01T14:00:37 CST" name="endSession" finished-at="2021-04-01T14:00:38 CST" duration-ms="259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSession -->
-      </class> <!-- test.FPTestCase8 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Test.FPTestCase1 -->
+    </test> <!-- Test 1 -->
+    <test started-at="2021-04-01T14:00:38 CST" name="Test 2" finished-at="2021-04-01T14:00:55 CST" duration-ms="17576">
+      <class name="Test.FPTestCase2">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase2@78e117e3]" started-at="2021-04-01T14:00:38 CST" name="setBaseUrl" finished-at="2021-04-01T14:00:43 CST" duration-ms="4886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="createANewaccount()[pri:0, instance:Test.FPTestCase2@78e117e3]" started-at="2021-04-01T14:00:43 CST" name="createANewaccount" description="Successfully creation of a new account" finished-at="2021-04-01T14:00:55 CST" duration-ms="12478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createANewaccount -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Test.FPTestCase2@78e117e3]" started-at="2021-04-01T14:00:55 CST" name="teardown" finished-at="2021-04-01T14:00:55 CST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Test.FPTestCase2 -->
+    </test> <!-- Test 2 -->
+    <test started-at="2021-04-01T14:00:55 CST" name="Test 3" finished-at="2021-04-01T14:01:07 CST" duration-ms="11906">
+      <class name="Test.FPTestCase3">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase3@3c22fc4c]" started-at="2021-04-01T14:00:55 CST" name="setBaseUrl" finished-at="2021-04-01T14:01:00 CST" duration-ms="4372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="successfullyLogin()[pri:0, instance:Test.FPTestCase3@3c22fc4c]" started-at="2021-04-01T14:01:00 CST" name="successfullyLogin" description="Creation of a new account with an inexisting email account" finished-at="2021-04-01T14:01:07 CST" duration-ms="7273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfullyLogin -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase3@3c22fc4c]" started-at="2021-04-01T14:01:07 CST" name="endSession" finished-at="2021-04-01T14:01:07 CST" duration-ms="258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- Test.FPTestCase3 -->
+    </test> <!-- Test 3 -->
+    <test started-at="2021-04-01T14:01:07 CST" name="Test 4" finished-at="2021-04-01T14:01:26 CST" duration-ms="18292">
+      <class name="Test.FPTestCase4">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase4@5be6e01c]" started-at="2021-04-01T14:01:07 CST" name="setBaseUrl" finished-at="2021-04-01T14:01:12 CST" duration-ms="4299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="clickEveningDresses()[pri:0, instance:Test.FPTestCase4@5be6e01c]" started-at="2021-04-01T14:01:12 CST" name="clickEveningDresses" description="Select a menu option called &#039;Dresses&#039;" finished-at="2021-04-01T14:01:17 CST" duration-ms="5929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickEveningDresses -->
+        <test-method signature="productConfig()[pri:0, instance:Test.FPTestCase4@5be6e01c]" started-at="2021-04-01T14:01:17 CST" name="productConfig" description="Configure the dress selected and proceed to check-out option without sign-in" finished-at="2021-04-01T14:01:25 CST" depends-on-methods="Test.FPTestCase4.clickEveningDresses" duration-ms="7852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productConfig -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase4@5be6e01c]" started-at="2021-04-01T14:01:25 CST" name="endSession" finished-at="2021-04-01T14:01:26 CST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- Test.FPTestCase4 -->
+    </test> <!-- Test 4 -->
+    <test started-at="2021-04-01T14:01:26 CST" name="Test 5" finished-at="2021-04-01T14:01:50 CST" duration-ms="24099">
+      <class name="Test.FPTestCase5">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase5@2473d930]" started-at="2021-04-01T14:01:26 CST" name="setBaseUrl" finished-at="2021-04-01T14:01:32 CST" duration-ms="5948" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="buyArticleSuccessfully()[pri:0, instance:Test.FPTestCase5@2473d930]" started-at="2021-04-01T14:01:32 CST" name="buyArticleSuccessfully" description="Make a purchase when user are already sign-in" finished-at="2021-04-01T14:01:49 CST" duration-ms="17881" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buyArticleSuccessfully -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase5@2473d930]" started-at="2021-04-01T14:01:49 CST" name="endSession" finished-at="2021-04-01T14:01:50 CST" duration-ms="267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- Test.FPTestCase5 -->
+    </test> <!-- Test 5 -->
+    <test started-at="2021-04-01T14:01:50 CST" name="Test 6" finished-at="2021-04-01T14:02:04 CST" duration-ms="14585">
+      <class name="Test.FPTestCase6">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase6@4b5d6a01]" started-at="2021-04-01T14:01:50 CST" name="setBaseUrl" finished-at="2021-04-01T14:01:56 CST" duration-ms="6228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="successfullyLogin()[pri:0, instance:Test.FPTestCase6@4b5d6a01]" started-at="2021-04-01T14:01:56 CST" name="successfullyLogin" description="Add a product to a wishlist" finished-at="2021-04-01T14:02:04 CST" duration-ms="7966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfullyLogin -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase6@4b5d6a01]" started-at="2021-04-01T14:02:04 CST" name="endSession" finished-at="2021-04-01T14:02:04 CST" duration-ms="390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- Test.FPTestCase6 -->
+    </test> <!-- Test 6 -->
+    <test started-at="2021-04-01T14:02:04 CST" name="Test 7" finished-at="2021-04-01T14:02:17 CST" duration-ms="13152">
+      <class name="Test.FPTestCase7">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase7@63021689]" started-at="2021-04-01T14:02:04 CST" name="setBaseUrl" finished-at="2021-04-01T14:02:09 CST" duration-ms="4620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="successfullyLogin()[pri:0, instance:Test.FPTestCase7@63021689]" started-at="2021-04-01T14:02:09 CST" name="successfullyLogin" description="Login user with a correct username and password" finished-at="2021-04-01T14:02:12 CST" duration-ms="3077" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfullyLogin -->
+        <test-method signature="AddNewAddress()[pri:0, instance:Test.FPTestCase7@63021689]" started-at="2021-04-01T14:02:12 CST" name="AddNewAddress" description="Add a new address" finished-at="2021-04-01T14:02:17 CST" depends-on-methods="Test.FPTestCase7.successfullyLogin" duration-ms="5223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewAddress -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase7@63021689]" started-at="2021-04-01T14:02:17 CST" name="endSession" finished-at="2021-04-01T14:02:17 CST" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- Test.FPTestCase7 -->
+    </test> <!-- Test 7 -->
+    <test started-at="2021-04-01T14:02:17 CST" name="Test 8" finished-at="2021-04-01T14:02:36 CST" duration-ms="18279">
+      <class name="Test.FPTestCase8">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase8@4b0b0854]" started-at="2021-04-01T14:02:17 CST" name="setBaseUrl" finished-at="2021-04-01T14:02:22 CST" duration-ms="4717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="login()[pri:0, instance:Test.FPTestCase8@4b0b0854]" started-at="2021-04-01T14:02:22 CST" name="login" description="Update my personal information (change password)" finished-at="2021-04-01T14:02:35 CST" duration-ms="13259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase8@4b0b0854]" started-at="2021-04-01T14:02:35 CST" name="endSession" finished-at="2021-04-01T14:02:36 CST" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- Test.FPTestCase8 -->
+    </test> <!-- Test 8 -->
+    <test started-at="2021-04-01T14:02:36 CST" name="Test 9" finished-at="2021-04-01T14:03:09 CST" duration-ms="33338">
+      <class name="Test.FPTestCase9">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase9@64cd705f]" started-at="2021-04-01T14:02:36 CST" name="setBaseUrl" finished-at="2021-04-01T14:02:40 CST" duration-ms="4203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="createAccontAndBuyArticle()[pri:0, instance:Test.FPTestCase9@64cd705f]" started-at="2021-04-01T14:02:40 CST" name="createAccontAndBuyArticle" description="Successfully creation of a new account and make a purchase" finished-at="2021-04-01T14:03:08 CST" duration-ms="28599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccontAndBuyArticle -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Test.FPTestCase9@64cd705f]" started-at="2021-04-01T14:03:08 CST" name="endSession" finished-at="2021-04-01T14:03:09 CST" duration-ms="533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- Test.FPTestCase9 -->
+    </test> <!-- Test 9 -->
+    <test started-at="2021-04-01T14:03:09 CST" name="Test 10" finished-at="2021-04-01T14:03:18 CST" duration-ms="9077">
+      <class name="Test.FPTestCase10">
+        <test-method is-config="true" signature="setBaseUrl()[pri:0, instance:Test.FPTestCase10@48ae9b55]" started-at="2021-04-01T14:03:09 CST" name="setBaseUrl" finished-at="2021-04-01T14:03:16 CST" duration-ms="6935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseUrl -->
+        <test-method signature="successfullySearch()[pri:0, instance:Test.FPTestCase10@48ae9b55]" started-at="2021-04-01T14:03:16 CST" name="successfullySearch" description="Successfully search of product" finished-at="2021-04-01T14:03:18 CST" duration-ms="1688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfullySearch -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Test.FPTestCase10@48ae9b55]" started-at="2021-04-01T14:03:18 CST" name="teardown" finished-at="2021-04-01T14:03:18 CST" duration-ms="450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Test.FPTestCase10 -->
+    </test> <!-- Test 10 -->
+  </suite> <!-- Suite -->
 </testng-results>
