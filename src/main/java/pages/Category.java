@@ -1,15 +1,22 @@
 package pages;
-//Git test 1 
+//Git test 1t;
+
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Category {
+	
 	final int SLEEP_TIME = 1500;
-
+	final WebDriver driver;
+	
 	public Category(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+		this.driver = driver;
 	}
 	@FindBy(xpath=".//a[./img[@class='replace-2x'] and @title='Casual Dresses']")
 	WebElement casualDresses ;
@@ -25,31 +32,49 @@ public class Category {
 
 	@FindBy(xpath="//*[@id=\"selectProductSort\"]")
 	WebElement sortBy ;
-
-	@FindBy(xpath="//*[@id=\'center_column\']/ul/li/div/div[2]/h5/a")
-	WebElement printedDress ;
-
-	@FindBy(xpath="//*[@id=\"quantity_wanted_p\"]/a[2]")
-	WebElement plusButton ;
-
-	@FindBy(xpath="//*[@id=\"group_1\"]/option[3]")
-	WebElement sizeL ;
-
-	@FindBy(xpath="//*[@id=\"group_1\"]")
-	WebElement sizeSelector ;
-
-	@FindBy(xpath="//*[@id=\"color_24\"]")
-	WebElement colorSelector ;
-
-	@FindBy(xpath="//*[@id=\"add_to_cart\"]/button/span")
-	WebElement sendToCart ;
-
-	@FindBy(xpath="//*[@id=\"layer_cart\"]/div[1]/div[2]/div[4]/a")
-	WebElement checkOut ;
-
-	@FindBy(xpath="//*[@id=\"center_column\"]/p[2]/a[1]")
-	WebElement checkOutFinal ;
-
+	
+	
+	@FindBy(xpath = "//*[@id='center_column']/ul/li[1]")
+	WebElement dress1;
+	
+	@FindBy(xpath = "/html/body/div/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[2]/div[2]/a[1]")
+	WebElement addcart1;
+	
+	//Doy click en proceed to checkout
+	@FindBy(xpath = "/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a")
+	WebElement proceedToCheckout;
+	
+	//Aqui guardo todos los articulos de la pagina en una lista de articulos
+	@FindBy(xpath = "//ul[@class = 'product_list grid row']/li")
+	//Esta es la lista de articulos
+	List<WebElement> productList;
+		
+	//Guardo todos los botones de add to cart, son 7
+	@FindBy(xpath = "//span[text()='Add to cart']")
+	List<WebElement> addCart;
+	
+	//Envio el indice de el articulo que quiero
+	public void selectItem(int itemIndex) {
+		//Creo una accion para poder hacer un mouseOver a ese articulo
+		Actions ac = new Actions(driver);
+			
+		//revis� si el indice que me paso es de un articulo que existe
+		if (itemIndex <= productList.size()-1) {
+			//Realizo el moseover
+			ac.moveToElement(productList.get(itemIndex)).perform();
+			//Doy click en el boton Add to cart
+			addCart.get(itemIndex).click();
+		
+		}
+		else {
+			System.out.println("Error");
+		}
+	}
+	
+	public void clickProceed() {
+		proceedToCheckout.click();
+	}
+	
 	/**
 	 * Click the casual dresses sub category option
 	 * @throws InterruptedException
@@ -144,8 +169,8 @@ public class Category {
 	 * Clicks the final proceed to checkout button 
 	 * @throws InterruptedException
 	 */
-	public void checkOutFinal() throws InterruptedException {
-		this.checkOutFinal.click();
+	public void clickDresses(int i) throws InterruptedException {
+		this.dresses[i].click();
 		Thread.sleep(SLEEP_TIME);
 	}
 }

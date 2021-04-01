@@ -1,20 +1,19 @@
 package Test;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import pages.LoginPage;
 import pages.MainPage;
-import pages.MyAccountPage;
-import pages.MyAccountPage.navBar;
+import pages.Product;
 
-
-public class FPTestCase1 {
-	WebDriver driver;
+public class FPTestCase6 {
+WebDriver driver;
 	
 	@BeforeTest
 	public void setBaseUrl() throws InterruptedException {
@@ -27,36 +26,28 @@ public class FPTestCase1 {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	@Test(enabled = true)
+	@Test
 	public void successfullyLogin() throws InterruptedException {
-		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-		mainPage.clicksignIn();
-		loginPage.enterUserEmail("ya_el1995@hotmail.com");
-		loginPage.enterUserPassword("KnD504012");
-		loginPage.clickSubmitButton();
-		
-	}
-	
-	
-	@Test(enabled = true)
-	public void buyArticleSuccessfully() throws InterruptedException {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
+		Product pro = new Product(driver);
+		
 		mainPage.clicksignIn();
-		loginPage.enterUserEmail("ya_el1995@hotmail.com");
-		loginPage.enterUserPassword("KnD504012");
+		loginPage.enterUserEmail("sergio12345@gmail.com");
+		loginPage.enterUserPassword("00000");
 		loginPage.clickSubmitButton();
 		
-		MyAccountPage accP = new MyAccountPage(driver);
-		accP.getNavBarOptions(navBar.DRESSES).click();
-		Thread.sleep(3000);
+		mainPage.logoImage();
+		mainPage.bestSeller();
+		mainPage.selectItem();
+		pro.makeWish();
 		
 	}
 	
 	
 	@AfterTest
-	public void endSession() {
+	public void endSession() throws InterruptedException {
+		Thread.sleep(10000);
 		driver.quit();
 	}
 }
