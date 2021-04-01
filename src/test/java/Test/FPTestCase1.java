@@ -49,7 +49,6 @@ public class FPTestCase1 {
 		
 		MyAccountPage accP = new MyAccountPage(driver);
 		accP.getNavBarOptions(navBar.DRESSES).click();
-		
 		Thread.sleep(3000);
 		
 	}
