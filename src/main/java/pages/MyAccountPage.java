@@ -15,8 +15,6 @@ public class MyAccountPage {
 		TSHIRT
 	}
 	
-	final int SLEEP_TIME = 1500;
-	
 	public MyAccountPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -71,9 +69,8 @@ public class MyAccountPage {
 	 * Click the Order History Details button
 	 * @throws InterruptedException
 	 */
-	public void clickOrderHistoryDetails() throws InterruptedException {
+	public void clickOrderHistoryDetails() {
 		this.orderHistoryDetails.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	
@@ -81,9 +78,8 @@ public class MyAccountPage {
 	 * Click My Wish Lists button
 	 * @throws InterruptedException
 	 */
-	public void clickmyWishLists() throws InterruptedException {
+	public void clickmyWishLists() {
 		this.myWishLists.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	
@@ -91,9 +87,8 @@ public class MyAccountPage {
 	 * Click My Credit Slips button
 	 * @throws InterruptedException
 	 */
-	public void clickMyCreditSlips() throws InterruptedException {
+	public void clickMyCreditSlips(){
 		this.myCreditSlips.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	
@@ -101,9 +96,8 @@ public class MyAccountPage {
 	 * Click My Addresses button
 	 * @throws InterruptedException
 	 */
-	public void clickMyAddresses() throws InterruptedException {
+	public void clickMyAddresses() {
 		this.myAddresses.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	
@@ -111,9 +105,8 @@ public class MyAccountPage {
 	 * Click MyPersonalInformation button
 	 * @throws InterruptedException
 	 */
-	public void clickMyPersonalInformation() throws InterruptedException {
+	public void clickMyPersonalInformation() {
 		this.myPersonalInformation.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 
 

@@ -25,7 +25,7 @@ public class LoginPage {
 	WebElement forgotPasswordLink;
 	
 	@FindBy(id="SubmitLogin")
-	WebElement submitButton;
+	public WebElement submitButton;
 	
 	@FindBy(id="email_create")
 	WebElement emailCreateTextBox;

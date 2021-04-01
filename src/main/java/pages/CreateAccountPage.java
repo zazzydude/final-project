@@ -3,14 +3,14 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class CreateAccountPage {
-	final WebDriver driver;
-	final int SLEEP_TIME = 1500;
-	public CreateAccountPage (WebDriver driver) {
-		this.driver=driver;
-	}
 	
+	public CreateAccountPage (WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
 	@FindBy(xpath="//*[@id='header_logo']/a")
 	WebElement homeButton;
 	
@@ -93,103 +93,131 @@ public class CreateAccountPage {
 		this.homeButton.click();
 	}
 	
-	public void mrRadioButton () {
+	public void clickMrRadioButton () {
 		this.mrRadio.click();
 	}
 	
-	public void mrsRadioButton () {
+	public void clickMrsRadioButton () {
 		this.mrsRadio.click();
 	}
 	
-	public void firstNameTextBox (String name) {
+	public void sendFirstNameTextBox (String name) {
 		this.firstNameTextBox.sendKeys(name);
 	}
 	
-	public void lastNameTextBox (String lastName) {
+	public void sendLastNameTextBox (String lastName) {
 		this.lastNameTextBox.sendKeys(lastName);
 	}
 	
-	public void emailTextBox (String mail) {
+	public void sendEmailTextBox (String mail) {
 		this.emailTextBox.sendKeys(mail);
 	}
 
-	public void passwordTextBox (String password) {
+	public void sendPasswordTextBox (String password) {
 		this.passwordTextBox.sendKeys(password);
 	}
 	
-	public void daysDropdown () {
+	public void clickDaysDropdown () {
 		this.dayDropdown.click();
 	}
 	
-	public void monthsDropdown () {
+	public void clickMonthsDropdown () {
 		this.monthDropdown.click();
 	}
 	
-	public void yearsDropdown () {
+	public void clickYearsDropdown () {
 		this.yearDropdown.click();
 	}
 	
-	public void newsLetterCheckBox () {
+	public void clickNewsLetterCheckBox () {
 		this.signUpForNewsletterCheckBox.click();
 	}
 	
-	public void reciveSpecialCheckBox () {
+	public void clickReciveSpecialCheckBox () {
 		this.receiveSpecialCheckBox.click();
 	}
 	
-	public void addressFirstNameTextBox (String addressName) {
+	public void sendAddressFirstNameTextBox (String addressName) {
 		this.addressFirstNameTextBox.sendKeys(addressName);
 	}
 	
-	public void addressLastNameTextBox (String addressLastName) {
+	public void sendAddressLastNameTextBox (String addressLastName) {
 		this.addressLastNameTextBox.sendKeys(addressLastName);
 	}
 	
-	public void companyTextBox (String company) {
+	public void sendCompanyTextBox (String company) {
 		this.companyTextBox.sendKeys(company);
 	}
 	
-	public void addressTextBox1 (String address1) {
+	public void sendAddressTextBox1 (String address1) {
 		this.addressTextBox.sendKeys(address1);
 	}
 	
-	public void addressTextBox2 (String address2) {
+	public void sendAddressTextBox2 (String address2) {
 		this.address2TextBox.sendKeys(address2);
 	}
 	
-	public void citiesTextBox (String city) {
+	public void sendCitiesTextBox (String city) {
 		this.cityTextBox.sendKeys(city);
 	}
 	
-	public void statesDropdown () {
+	public void clickStatesDropdown () {
 		this.stateDropdown.click();
 	}
 	
-	public void zipTextBox (String zipCode) {
+	public void sendZipTextBox (String zipCode) {
 		this.zipCodeTextBox.sendKeys(zipCode);
 	}
 
-	public void ctryDropdown () {
+	public void clickCtryDropdown () {
 		this.countryDropdown.click();
 	}
 
-	public void addInfo (String additional) {
+	public void sendAddInfo (String additional) {
 		this.additionalInfoTextBox.sendKeys(additional);
 	}
 
-	public void homePhoneTextBox (String phonenumber) {
+	public void sendHomePhoneTextBox (String phonenumber) {
 		this.homePhoneTextBox.sendKeys(phonenumber);
 	}
 
-	public void mobileTextBox (String mobilenumber) {
+	public void sendMobileTextBox (String mobilenumber) {
 		this.homePhoneTextBox.sendKeys(mobilenumber);
 	}
 
-	public void addressAliasTextBox (String addressAlias) {
+	public void sendAddressAliasTextBox (String addressAlias) {
 		this.addressAliasTextBox.sendKeys(addressAlias);
 	}
 
-	public void regisButton () {
+	public void clickRegisButton () {
 		this.registerButton.click();
+	}
+	public void selectDayDropDown(int option)  {
+		Select stateSelect = new Select(dayDropdown);
+		stateSelect.selectByIndex(option);
+		
+	}
+	
+	public void selectMonthDropDown(int option)  {
+		Select stateSelect = new Select(monthDropdown);
+		stateSelect.selectByIndex(option);
+		
+	}
+	
+	public void selectYearsDropdown (String value) {
+		Select yearSelect = new Select(yearDropdown);
+		yearSelect.selectByValue(value);
+	}
+	
+	public void selectStateDropDown(int option)  {
+		Select stateSelect = new Select(stateDropdown);
+		stateSelect.selectByIndex(option);
+		
+	}
+	
+	public void selectCountryDropDown(int option)  {
+		Select stateSelect = new Select(countryDropdown);
+		stateSelect.selectByIndex(option);
+		
 	}
 }
