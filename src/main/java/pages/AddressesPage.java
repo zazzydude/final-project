@@ -16,9 +16,8 @@ public class AddressesPage {
 	
 	/**
 	 * Click on the Add New Address button
-	 * @throws InterruptedException
 	 */
-	public void clickAddNewAddressButton() throws InterruptedException {
+	public void clickAddNewAddressButton() {
 		this.addNewAddressButton.click();
 	}
 }

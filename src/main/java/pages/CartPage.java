@@ -35,7 +35,7 @@ public class CartPage {
 		
 	}
 		
-	public void clickcart1() throws InterruptedException {
+	public void clickcart1() {
 	this.Cart1.click();	
 	//Thread.sleep(SLEEP_TIME);
 	}

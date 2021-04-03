@@ -15,7 +15,7 @@ public class FPTestCase1 {
 WebDriver driver;
 	
 	@BeforeTest
-	public void setBaseUrl() throws InterruptedException {
+	public void setBaseUrl() {
 		System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
@@ -28,7 +28,7 @@ WebDriver driver;
 		groups = {"sanity", "regression"}, 
 		priority = 1
 	)
-	public void successfullyLogin() throws InterruptedException {
+	public void successfullyLogin() {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		mainPage.clicksignIn();
@@ -43,7 +43,7 @@ WebDriver driver;
 		groups = {"sanity", "regression"}, 
 		priority = 0
 	)
-	public void unsuccessfullyLogin() throws InterruptedException {
+	public void unsuccessfullyLogin() {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		mainPage.clicksignIn();

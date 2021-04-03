@@ -18,7 +18,7 @@ public class FPTestCase5 {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void setBaseUrl() throws InterruptedException {
+	public void setBaseUrl() {
 		System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
@@ -35,7 +35,7 @@ public class FPTestCase5 {
 		description = "Make a purchase when user are already sign-in",
 		groups = {}
 	)
-	public void buyArticleSuccessfully() throws InterruptedException {
+	public void buyArticleSuccessfully() {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		CartPage cart = new CartPage(driver);
@@ -49,8 +49,7 @@ public class FPTestCase5 {
 		accP.getNavBarOptions(navBar.DRESSES).click();
 
 		
-		//cart.clickProduct();
-		//Thread.sleep(3000);	
+		//cart.clickProduct();	
 		//cart.clickEvening();
 		cart.selectitem();
 		

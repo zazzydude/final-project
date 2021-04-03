@@ -15,7 +15,7 @@ public class FPTestCase4 {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void setBaseUrl() throws InterruptedException {
+	public void setBaseUrl() {
 		System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
@@ -29,7 +29,7 @@ public class FPTestCase4 {
 		description = "Select a menu option called 'Dresses'",
 		groups = {}
 	)
-	public void clickEveningDresses() throws InterruptedException {
+	public void clickEveningDresses() {
 		MainPage mainPage = new MainPage(driver);
 		CategoryPage category = new CategoryPage(driver);
 		mainPage.dresses();
@@ -44,7 +44,7 @@ public class FPTestCase4 {
 		description = "Configure the dress selected and proceed to check-out option without sign-in",
 		groups = {}
 	)
-	public void productConfig() throws InterruptedException{
+	public void productConfig() {
 		CategoryPage category = new CategoryPage(driver);
 		//Product product = new Product(driver);
 		category.plusButton();

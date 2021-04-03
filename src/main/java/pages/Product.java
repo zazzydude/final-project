@@ -9,10 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 public class Product {
 	
 	final WebDriver driver;
-	final int SLEEP_TIME = 1500;
 	
 	public Product(WebDriver driver){
-		PageFactory.initElements(driver, this);
 		this.driver = driver;	
 		PageFactory.initElements(driver, this);
 	}
@@ -81,29 +79,25 @@ public class Product {
 	/**
 	 * this method receives the quantity of products you want to buy
 	 * @param quantity
-	 * @throws InterruptedException
 	 */
-	public void enterQuantity(String num) throws InterruptedException {
+	public void enterQuantity(String num) {
 		quantityTextBox.sendKeys(num);
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
 	 * this method select de size of the product
 	 * @param index
-	 * @throws InterruptedException
 	 */
-	public void selectSize(int index) throws InterruptedException {
+	public void selectSize(int index) {
 		Select sizeDropdown = new Select(sizeSelect);
 		sizeDropdown.selectByIndex(index);
-		Thread.sleep(SLEEP_TIME);
 	}
 	 /**
 	  * this method select the color of the product
 	  * @param index
 	  * @throws InterruptedException
 	  */
-	public void selectColor(int index) throws InterruptedException {
+	public void selectColor(int index) {
 		switch(index) {
 			case 1:
 				color1.click();
@@ -121,15 +115,13 @@ public class Product {
 				color1.click();
 				break;
 		}
-		Thread.sleep(SLEEP_TIME);
 	}
 	
 	/**
 	 * This method clicks on the add to cart button
 	 * @throws InterruptedException
 	 */
-	public void clickOnAddCart() throws InterruptedException {
+	public void clickOnAddCart() {
 		addToCartButton.click();
-		Thread.sleep(SLEEP_TIME);
 	}
 }

@@ -17,8 +17,7 @@ public class FPTestCase3 {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void setBaseUrl() throws InterruptedException 
-	{
+	public void setBaseUrl() {
 		System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
@@ -30,23 +29,16 @@ public class FPTestCase3 {
 		description = "Creation of a new account with an inexisting email account",
 		groups = {}
 	)
-	public void successfullyLogin() throws InterruptedException {
+	public void successfullyLogin() {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		CreateAccountPage createAccountPage = new CreateAccountPage(driver);
 		mainPage.clicksignIn();	
-		
-		java.util.Date fecha = new Date();
-				
+		java.util.Date fecha = new Date();		
 		String s1= String.valueOf(fecha);
-		
 		s1 = s1.replace(" ","");//replaces all occurrences of " " to ""
 		s1 = s1.replace(":","");//replaces all occurrences of ":" to ""
-		
-		
 		loginPage.enterRegisterEmail(s1 + "@bncxjhip.com");
-		
-		
 		loginPage.clickSubmitCreateButton();
 		createAccountPage.mrRadioButton ();
 		createAccountPage.firstNameTextBox ("Antonio");

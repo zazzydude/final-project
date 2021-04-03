@@ -19,7 +19,7 @@ public class FPTestCase9 {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void setBaseUrl() throws InterruptedException {
+	public void setBaseUrl() {
 		System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
@@ -31,13 +31,12 @@ public class FPTestCase9 {
 	
 	/**
 	 * Method of the FPTC11.1
-	 * @throws InterruptedException
 	 */
 	@Test(
 		description = "Successfully creation of a new account and make a purchase",
 		groups = {}
 	)
-	public void createAccontAndBuyArticle() throws InterruptedException {
+	public void createAccontAndBuyArticle() {
 		java.util.Date fecha = new Date();
 		String s1= String.valueOf(fecha);
 		s1 = s1.replace(" ","");//replaces all occurrences of " " to ""
@@ -47,7 +46,6 @@ public class FPTestCase9 {
 		CreateAccountPage createAccount = new CreateAccountPage(driver);
 		CategoryPage catPage = new CategoryPage(driver);
 		CartPage cart = new CartPage(driver);
-		
 		//click on Sign in
 		mainPage.clicksignIn();
 		// enter a email and click on create account
@@ -68,24 +66,16 @@ public class FPTestCase9 {
 		createAccount.mobileTextBox("8180296420");
 		createAccount.addressAliasTextBox("Home");
 		createAccount.regisButton();
-		
 		mainPage.searchQuery("Dresses");
 		mainPage.search();
-		Thread.sleep(3000);
 		catPage.selectItem(0);
-		Thread.sleep(3000);
 		catPage.clickProceed();
-		
-		Thread.sleep(3000);
-		
 		cart.clickProceed2();
 		cart.clickProceed3();
 		cart.clickCbAgree();
 		cart.clickProceed4();
 		cart.clickPayBankWire();
 		cart.clickNavCart();
-		
-		Thread.sleep(3000);
 	}
 	
 	@AfterTest

@@ -57,9 +57,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the first name text box
 	 * @param name -text to write
-	 * @throws InterruptedException
 	 */
-	public void enterFirstName(String name) throws InterruptedException {
+	public void enterFirstName(String name) {
 		this.firstNameTextBox.clear();
 		this.firstNameTextBox.sendKeys(name);
 	}
@@ -67,9 +66,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the last name text box
 	 * @param lastName - text to write
-	 * @throws InterruptedException
 	 */
-	public void enterLastName(String lastName) throws InterruptedException {
+	public void enterLastName(String lastName) {
 		this.lastNameTextBox.clear();
 		this.lastNameTextBox.sendKeys(lastName);
 	}
@@ -77,9 +75,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the company text box
 	 * @param company -text to write
-	 * @throws InterruptedException
 	 */
-	public void enterCompany(String company) throws InterruptedException {
+	public void enterCompany(String company) {
 		this.companyTextBox.clear();
 		this.companyTextBox.sendKeys(company);
 	}
@@ -87,9 +84,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the address text box
 	 * @param address -text to write
-	 * @throws InterruptedException
 	 */
-	public void enterAddress(String address) throws InterruptedException {
+	public void enterAddress(String address) {
 		this.address1TextBox.clear();
 		this.address1TextBox.sendKeys(address);
 	}
@@ -99,7 +95,7 @@ public class AddressPage {
 	 * @param address2 -text to write
 	 * @throws InterruptedException
 	 */
-	public void enterAddressLine2(String address2) throws InterruptedException {
+	public void enterAddressLine2(String address2) {
 		this.address2TextBox.clear();
 		this.address2TextBox.sendKeys(address2);
 	}
@@ -107,9 +103,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the city text box
 	 * @param city - text to write
-	 * @throws InterruptedException
 	 */
-	public void enterCity(String city) throws InterruptedException {
+	public void enterCity(String city) {
 		this.cityTextBox.clear();
 		this.cityTextBox.sendKeys(city);
 	}
@@ -117,9 +112,8 @@ public class AddressPage {
 	/**
 	 * Select an option in the state drop-down by the order index
 	 * @param option -number of index
-	 * @throws InterruptedException
 	 */
-	public void selectState(int option) throws InterruptedException {
+	public void selectState(int option) {
 		Select stateSelect = new Select(this.idStateSelect);
 		stateSelect.selectByIndex(option);
 	}
@@ -127,9 +121,8 @@ public class AddressPage {
 	/**
 	 * Select a option in the state drop-down by the showed value
 	 * @param option -text of the value
-	 * @throws InterruptedException
 	 */
-	public void selectState(String option) throws InterruptedException {
+	public void selectState(String option) {
 		Select stateSelect = new Select(this.idStateSelect);
 		stateSelect.selectByVisibleText(option);
 	}
@@ -137,9 +130,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the ZIP/Postal code text box
 	 * @param postCode -text to write
-	 * @throws InterruptedException
 	 */
-	public void enterPostalCode(String postCode) throws InterruptedException {
+	public void enterPostalCode(String postCode) {
 		this.postCodeTextBox.clear();
 		this.postCodeTextBox.sendKeys(postCode);
 	}
@@ -147,9 +139,8 @@ public class AddressPage {
 	/**
 	 * Select an option in the country drop-down by the order index
 	 * @param option -number of index
-	 * @throws InterruptedException
 	 */
-	public void selectCountry(int option) throws InterruptedException {
+	public void selectCountry(int option) {
 		Select countrySelect = new Select(this.idCountrySelect);
 		countrySelect.selectByIndex(option);
 	}
@@ -157,9 +148,8 @@ public class AddressPage {
 	/**
 	 * Select a option in the country drop-down by the showed value
 	 * @param option -text of the value
-	 * @throws InterruptedException
 	 */
-	public void selectCountry(String option) throws InterruptedException {
+	public void selectCountry(String option) {
 		Select countrySelect = new Select(this.idCountrySelect);
 		countrySelect.selectByVisibleText(option);
 	}
@@ -167,9 +157,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the home phone text box
 	 * @param phone -text to write
-	 * @throws InterruptedException
 	 */
-	public void enterHomePhone(String phone) throws InterruptedException {
+	public void enterHomePhone(String phone) {
 		this.phoneTextBox.clear();
 		this.phoneTextBox.sendKeys(phone);
 	}
@@ -177,9 +166,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the mobile phone text box
 	 * @param phone -text to write
-	 * @throws InterruptedException
 	 */
-	public void enterMobilePhone(String phone) throws InterruptedException {
+	public void enterMobilePhone(String phone) {
 		this.phoneMobileTextBox.clear();
 		this.phoneMobileTextBox.sendKeys(phone);
 	}
@@ -187,9 +175,8 @@ public class AddressPage {
 	/**
 	 * Write a text on the Additional information text box
 	 * @param info -text to write
-	 * @throws InterruptedException
 	 */
-	public void enterAdditionalInformation(String info) throws InterruptedException {
+	public void enterAdditionalInformation(String info) {
 		this.otherTextBox.clear();
 		this.otherTextBox.sendKeys(info);
 	}
@@ -197,18 +184,16 @@ public class AddressPage {
 	/**
 	 * Write a text on the Address Title text box
 	 * @param title -text to write
-	 * @throws InterruptedException
 	 */
-	public void enterAddressTitle(String title) throws InterruptedException {
+	public void enterAddressTitle(String title) {
 		this.aliasTextBox.clear();
 		this.aliasTextBox.sendKeys(title);
 	}
 	
 	/**
 	 * Click the Save button
-	 * @throws InterruptedException
 	 */
-	public void clickSaveButton() throws InterruptedException {
+	public void clickSaveButton() {
 		this.submitAddressButton.click();
 	}
 }

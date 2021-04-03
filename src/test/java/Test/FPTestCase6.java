@@ -16,7 +16,7 @@ public class FPTestCase6 {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void setBaseUrl() throws InterruptedException {
+	public void setBaseUrl() {
 		System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
@@ -30,7 +30,7 @@ public class FPTestCase6 {
 		description = "Add a product to a wishlist",
 		groups = {}
 	)
-	public void successfullyLogin() throws InterruptedException {
+	public void successfullyLogin() {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		ProductPage pro = new ProductPage(driver);
@@ -49,7 +49,7 @@ public class FPTestCase6 {
 	
 	
 	@AfterTest
-	public void endSession() throws InterruptedException {
+	public void endSession() {
 		driver.quit();
 	}
 }

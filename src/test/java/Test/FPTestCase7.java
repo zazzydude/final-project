@@ -30,7 +30,7 @@ WebDriver driver;
 		groups = {"sanity", "regression"},
 		description = "Login user with a correct username and password"
 	)
-	public void successfullyLogin() throws InterruptedException {
+	public void successfullyLogin() {
 		MainPage mainPage = new MainPage(driver);
 		LoginPage loginPage = new LoginPage(driver);
 		mainPage.clicksignIn();
@@ -44,7 +44,7 @@ WebDriver driver;
 		groups = {"sanity", "regression"},
 		description = "Add a new address"
 	)
-	public void AddNewAddress() throws InterruptedException {
+	public void AddNewAddress() {
 		//Going to the My Addresses section
 		MyAccountPage myAccountPage = new MyAccountPage(driver);
 		myAccountPage.clickMyAddresses();

@@ -32,57 +32,45 @@ public class LoginPage {
 	/**
 	 * Send text to the input email of the login
 	 * @param email -user email
-	 * @throws InterruptedException
 	 */
 	public void enterUserEmail(String email) {
 		this.emailTextBox.sendKeys(email);
-		
 	}
 	
 	/**
 	 * Send text to the input user password of the login
 	 * @param pass -user password
-	 * @throws InterruptedException
 	 */
 	public void enterUserPassword(String pass) {
 		this.passwordTextBox.sendKeys(pass);
-		
 	}
 	
 	/**
 	 * Click the login submit button
-	 * @throws InterruptedException
 	 */
 	public void clickSubmitButton() {
-		this.submitButton.click();
-		
+		this.submitButton.click();	
 	}
 	
 	/**
 	 * Send a text to the input email to create a new account
 	 * @param email -user email
-	 * @throws InterruptedException
 	 */
 	public void enterRegisterEmail(String email)  {
 		this.emailCreateTextBox.sendKeys(email);
-		
 	}
 	
 	/**
 	 * Click on the create submit button to create a new account
-	 * @throws InterruptedException
 	 */
 	public void clickSubmitCreateButton()  {
 		this.submitCreateButton.click();
-		
 	}
 	
 	/**
 	 * Click on the link to recover the user password
-	 * @throws InterruptedException
 	 */
 	public void clickRecoverPasswordLink() {
 		this.forgotPasswordLink.click();
-		
 	}
 }

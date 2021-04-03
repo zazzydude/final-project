@@ -71,27 +71,24 @@ public class ProductPage {
 	/**
 	 * this method receives the quantity of products you want to buy
 	 * @param quantity
-	 * @throws InterruptedException
 	 */
-	public void enterQuantity(String num) throws InterruptedException {
+	public void enterQuantity(String num) {
 		quantityTextBox.sendKeys(num);
 	}
 	
 	/**
 	 * this method select de size of the product
 	 * @param index
-	 * @throws InterruptedException
 	 */
-	public void selectSize(int index) throws InterruptedException {
+	public void selectSize(int index) {
 		Select sizeDropdown = new Select(sizeSelect);
 		sizeDropdown.selectByIndex(index);
 	}
 	 /**
 	  * this method select the color of the product
 	  * @param index
-	  * @throws InterruptedException
 	  */
-	public void selectColor(int index) throws InterruptedException {
+	public void selectColor(int index) {
 		switch(index) {
 			case 1:
 				color1.click();
@@ -113,9 +110,8 @@ public class ProductPage {
 	
 	/**
 	 * This method clicks on the add to cart button
-	 * @throws InterruptedException
 	 */
-	public void clickOnAddCart() throws InterruptedException {
+	public void clickOnAddCart() {
 		addToCartButton.click();
 	}
 }

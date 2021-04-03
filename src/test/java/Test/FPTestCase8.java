@@ -17,7 +17,7 @@ public class FPTestCase8 {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void setBaseUrl() throws InterruptedException {
+	public void setBaseUrl() {
 		System.setProperty("webdriver.chrome.driver","./src/main/resources/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
@@ -46,7 +46,6 @@ public class FPTestCase8 {
 		accountpurchase.newPassword("12345");
 		accountpurchase.confirmationPassword("12345");
 		accountpurchase.saveButton();
-		Thread.sleep(3000);
 		driver.navigate().refresh();
 		createaccountpage.mrRadioButton();
 		accountpurchase.currentPassword("12345");

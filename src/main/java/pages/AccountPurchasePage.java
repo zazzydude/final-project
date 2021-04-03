@@ -37,7 +37,6 @@ public class AccountPurchasePage {
 
 	/**
 	 * Clicks the personal info button when Signing In 
-	 * @throws InterruptedException
 	 */
 	public void personalInfoB () {
 		this.personalInfoB.click();
@@ -45,7 +44,6 @@ public class AccountPurchasePage {
 	
 	/**
 	 * Clicks the Current Password text box
-	 * @throws InterruptedException
 	 */
 	public void currentPassword(String name) {
 		this.currentPassword.sendKeys(name);
@@ -53,7 +51,6 @@ public class AccountPurchasePage {
 	
 	/**
 	 * Clicks the New Password text box
-	 * @throws InterruptedException
 	 */
 	public void newPassword(String name) {
 		this.newPassword.sendKeys(name);
@@ -61,7 +58,6 @@ public class AccountPurchasePage {
 	
 	/**
 	 * Clicks the Confirmation Password text box
-	 * @throws InterruptedException
 	 */
 	public void confirmationPassword(String name) {
 		this.confirmationPassword.sendKeys(name);
@@ -69,7 +65,6 @@ public class AccountPurchasePage {
 	
 	/**
 	 * Clicks the save button in Your Personal Information page
-	 * @throws InterruptedException
 	 */
 	public void saveButton() {
 		this.saveButton.click();

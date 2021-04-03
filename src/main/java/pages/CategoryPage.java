@@ -92,25 +92,22 @@ public class CategoryPage {
 
 	/**
 	 * Click the casual dresses sub category option
-	 * @throws InterruptedException
 	 */
-	public void clickCasualDresses() throws InterruptedException {
+	public void clickCasualDresses() {
 		this.casualDresses.click();
 	}
 
 	/**
 	 * Click the evening dresses sub category option
-	 * @throws InterruptedException
 	 */
-	public void clickEveningDresses() throws InterruptedException {
+	public void clickEveningDresses() {
 		this.eveningDresses.click();
 	}
 
 	/**
 	 * Click the summer dresses sub category option
-	 * @throws InterruptedException
 	 */
-	public void clickSummerDresses() throws InterruptedException {
+	public void clickSummerDresses() {
 		this.summerDresses.click();
 	}
 
@@ -118,65 +115,56 @@ public class CategoryPage {
 	 * Clicks the first product in the evening dresses sub category 
 	 * @throws InterruptedException
 	 */
-	public void printedDress() throws InterruptedException {
+	public void printedDress() {
 		this.printedDress.click();
 	}
 
 	/**
 	 * Clicks the + button to add a product 
-	 * @throws InterruptedException
 	 */
-	public void plusButton() throws InterruptedException {
+	public void plusButton() {
 		this.plusButton.click();
 	}
 
 	/**
 	 * Clicks the size slider to show the options
-	 * @throws InterruptedException
 	 */
-	public void sizeSelector() throws InterruptedException {
+	public void sizeSelector() {
 		this.sizeSelector.click();
 	}
 
 	/**
 	 * Clicks the option L in the dropdown menu
-	 * @throws InterruptedException
 	 */
-	public void sizeL() throws InterruptedException {
+	public void sizeL() {
 		this.sizeL.click();
 	}
 
 	/**
 	 * Clicks the color pink option 
-	 * @throws InterruptedException
 	 */
-	public void colorSelector() throws InterruptedException {
+	public void colorSelector() {
 		this.colorSelector.click();
 	}
 
 	/**
 	 * Clicks the option add to cart
-	 * @throws InterruptedException
 	 */
-	public void sendToCart() throws InterruptedException {
+	public void sendToCart() {
 		this.sendToCart.click();
 	}
 
 	/**
 	 * Clicks the proceed to checkout button 
-	 * @throws InterruptedException
 	 */
-	public void checkOut() throws InterruptedException {
+	public void checkOut() {
 		this.checkOut.click();
 	}
 
 	/**
 	 * Clicks the final proceed to checkout button 
-	 * @throws InterruptedException
 	 */
-	public void checkOutFinal() throws InterruptedException {
+	public void checkOutFinal() {
 		this.checkOutFinal.click();
 	}
-	
-	
 }

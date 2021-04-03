@@ -69,34 +69,32 @@ public class MyAccountPage {
 	 * Click the Order History Details button
 	 * @throws InterruptedException
 	 */
-	public void clickOrderHistoryDetails() throws InterruptedException {
+	public void clickOrderHistoryDetails() {
 		this.orderHistoryDetails.click();
 	}
 	
 	
 	/**
 	 * Click My Wish Lists button
-	 * @throws InterruptedException
 	 */
-	public void clickmyWishLists() throws InterruptedException {
+	public void clickmyWishLists() {
 		this.myWishLists.click();
 	}
 	
 	
 	/**
 	 * Click My Credit Slips button
-	 * @throws InterruptedException
 	 */
-	public void clickMyCreditSlips() throws InterruptedException {
+	public void clickMyCreditSlips() {
 		this.myCreditSlips.click();
 	}
 	
 	
 	/**
 	 * Click My Addresses button
-	 * @throws InterruptedException
+
 	 */
-	public void clickMyAddresses() throws InterruptedException {
+	public void clickMyAddresses() {
 		this.myAddresses.click();
 	}
 	
@@ -105,7 +103,7 @@ public class MyAccountPage {
 	 * Click MyPersonalInformation button
 	 * @throws InterruptedException
 	 */
-	public void clickMyPersonalInformation() throws InterruptedException {
+	public void clickMyPersonalInformation() {
 		this.myPersonalInformation.click();
 	}
 }
